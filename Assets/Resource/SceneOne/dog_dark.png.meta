@@ -1,0 +1,640 @@
+fileFormatVersion: 2
+guid: 6953f1d33053238408274ac20b88715e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3059870439247266696
+    second: dog_dark_0
+  - first:
+      213: 711848910823849779
+    second: dog_dark_1
+  - first:
+      213: 7295777075004626884
+    second: dog_dark_2
+  - first:
+      213: 9196252515748015276
+    second: dog_dark_3
+  - first:
+      213: 6154436996549697644
+    second: dog_dark_4
+  - first:
+      213: 9169612789309068094
+    second: dog_dark_5
+  - first:
+      213: 4407649119046970324
+    second: dog_dark_6
+  - first:
+      213: 4009174002219327820
+    second: dog_dark_7
+  - first:
+      213: -6920095946259337768
+    second: dog_dark_8
+  - first:
+      213: -4852622683405160995
+    second: dog_dark_9
+  - first:
+      213: 8209575422822358084
+    second: dog_dark_10
+  - first:
+      213: 7135753691468121611
+    second: dog_dark_11
+  - first:
+      213: 2009705766589816990
+    second: dog_dark_12
+  - first:
+      213: 9004070565515091825
+    second: dog_dark_13
+  - first:
+      213: 6107606162050973454
+    second: dog_dark_14
+  - first:
+      213: 1038809119254293023
+    second: dog_dark_15
+  - first:
+      213: -2054103248993990355
+    second: dog_dark_16
+  - first:
+      213: -9160727724707748573
+    second: dog_dark_17
+  - first:
+      213: -1721130331173678835
+    second: dog_dark_18
+  - first:
+      213: 6387013831655924968
+    second: dog_dark_19
+  - first:
+      213: -5817186496433191416
+    second: dog_dark_20
+  - first:
+      213: -5503831177073886720
+    second: dog_dark_21
+  - first:
+      213: -1317039914977753553
+    second: dog_dark_22
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dog_dark_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2250
+        width: 336
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8834d0ed3f7d67a20800000000000000
+      internalID: 3059870439247266696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_dark_2
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 1801
+        width: 414
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c7d614589ecf3560800000000000000
+      internalID: 7295777075004626884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_dark_3
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1798
+        width: 406
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cace3f170f6af9f70800000000000000
+      internalID: 9196252515748015276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_dark_4
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 1798
+        width: 447
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c60eddb37d3f86550800000000000000
+      internalID: 6154436996549697644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_dark_5
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 1799
+        width: 407
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3355aacf32014f70800000000000000
+      internalID: 9169612789309068094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_dark_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1352
+        width: 403
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dbab53658d1b2d30800000000000000
+      internalID: 4407649119046970324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_dark_7
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 1350
+        width: 449
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c41a305738273a730800000000000000
+      internalID: 4009174002219327820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_dark_8
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 1348
+        width: 480
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dd679fa661e6ff90800000000000000
+      internalID: -6920095946259337768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_dark_9
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 1445
+        width: 472
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddde1a6316508acb0800000000000000
+      internalID: -4852622683405160995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_dark_10
+      rect:
+        serializedVersion: 2
+        x: 2199
+        y: 1348
+        width: 442
+        height: 235
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44c9a12d9554ee170800000000000000
+      internalID: 8209575422822358084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_dark_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 899
+        width: 384
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b06c3a0fc2a470360800000000000000
+      internalID: 7135753691468121611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_dark_12
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 898
+        width: 379
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e90e3a03fb8e3eb10800000000000000
+      internalID: 2009705766589816990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_dark_15
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 448
+        width: 256
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1aa69ed3679a6e00800000000000000
+      internalID: 1038809119254293023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_dark_16
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 449
+        width: 257
+        height: 356
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d29ccb76afb5e73e0800000000000000
+      internalID: -2054103248993990355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_dark_17
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 449
+        width: 396
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 325e8b48bae8ed080800000000000000
+      internalID: -9160727724707748573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_dark_18
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 448
+        width: 403
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d011e3e25115d18e0800000000000000
+      internalID: -1721130331173678835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_dark_19
+      rect:
+        serializedVersion: 2
+        x: 2202
+        y: 452
+        width: 394
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e4ab537d3b33a850800000000000000
+      internalID: 6387013831655924968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_dark_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 319
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80686e7c3b3354fa0800000000000000
+      internalID: -5817186496433191416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_dark_21
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 0
+        width: 419
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00a7aca74b67e93b0800000000000000
+      internalID: -5503831177073886720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_dark_22
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 0
+        width: 337
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f268db0ec2fe8bde0800000000000000
+      internalID: -1317039914977753553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dog_dark_1
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 1801
+        width: 460
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33f776710def0e900800000000000000
+      internalID: 711848910823849779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
