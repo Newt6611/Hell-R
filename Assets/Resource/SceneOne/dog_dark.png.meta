@@ -186,9 +186,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 2250
-        width: 336
-        height: 270
+        y: 2249
+        width: 337
+        height: 271
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,13 +203,34 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
+      name: dog_dark_1
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 1799
+        width: 463
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33f776710def0e900800000000000000
+      internalID: 711848910823849779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
       name: dog_dark_2
       rect:
         serializedVersion: 2
-        x: 2200
-        y: 1801
-        width: 414
-        height: 228
+        x: 2242
+        y: 1799
+        width: 416
+        height: 230
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,10 +248,10 @@ TextureImporter:
       name: dog_dark_3
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 1798
-        width: 406
-        height: 226
+        width: 455
+        height: 227
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -248,9 +269,9 @@ TextureImporter:
       name: dog_dark_4
       rect:
         serializedVersion: 2
-        x: 550
+        x: 577
         y: 1798
-        width: 447
+        width: 448
         height: 202
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -269,8 +290,8 @@ TextureImporter:
       name: dog_dark_5
       rect:
         serializedVersion: 2
-        x: 1650
-        y: 1799
+        x: 1697
+        y: 1798
         width: 407
         height: 232
       alignment: 0
@@ -291,9 +312,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1352
+        y: 1349
         width: 403
-        height: 230
+        height: 232
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -312,7 +333,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 550
-        y: 1350
+        y: 1349
         width: 449
         height: 205
       alignment: 0
@@ -332,10 +353,10 @@ TextureImporter:
       name: dog_dark_8
       rect:
         serializedVersion: 2
-        x: 1099
-        y: 1348
-        width: 480
-        height: 236
+        x: 1100
+        y: 1349
+        width: 479
+        height: 235
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -353,7 +374,7 @@ TextureImporter:
       name: dog_dark_9
       rect:
         serializedVersion: 2
-        x: 1650
+        x: 1649
         y: 1445
         width: 472
         height: 209
@@ -375,9 +396,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2199
-        y: 1348
-        width: 442
-        height: 235
+        y: 1349
+        width: 443
+        height: 233
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -397,8 +418,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 899
-        width: 384
-        height: 300
+        width: 383
+        height: 299
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -417,9 +438,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 550
-        y: 898
-        width: 379
-        height: 368
+        y: 899
+        width: 380
+        height: 367
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -439,7 +460,7 @@ TextureImporter:
         serializedVersion: 2
         x: 1
         y: 448
-        width: 256
+        width: 257
         height: 350
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -479,10 +500,10 @@ TextureImporter:
       name: dog_dark_17
       rect:
         serializedVersion: 2
-        x: 1099
+        x: 1100
         y: 449
         width: 396
-        height: 253
+        height: 254
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -503,7 +524,7 @@ TextureImporter:
         x: 1650
         y: 448
         width: 403
-        height: 197
+        height: 198
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -521,10 +542,10 @@ TextureImporter:
       name: dog_dark_19
       rect:
         serializedVersion: 2
-        x: 2202
-        y: 452
-        width: 394
-        height: 89
+        x: 2201
+        y: 448
+        width: 457
+        height: 94
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -545,7 +566,7 @@ TextureImporter:
         x: 0
         y: 0
         width: 319
-        height: 310
+        height: 311
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -565,8 +586,8 @@ TextureImporter:
         serializedVersion: 2
         x: 550
         y: 0
-        width: 419
-        height: 310
+        width: 420
+        height: 309
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -584,10 +605,10 @@ TextureImporter:
       name: dog_dark_22
       rect:
         serializedVersion: 2
-        x: 1099
+        x: 1100
         y: 0
-        width: 337
-        height: 270
+        width: 336
+        height: 271
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -597,27 +618,6 @@ TextureImporter:
       bones: []
       spriteID: f268db0ec2fe8bde0800000000000000
       internalID: -1317039914977753553
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dog_dark_1
-      rect:
-        serializedVersion: 2
-        x: 1101
-        y: 1801
-        width: 460
-        height: 211
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 33f776710def0e900800000000000000
-      internalID: 711848910823849779
       vertices: []
       indices: 
       edges: []

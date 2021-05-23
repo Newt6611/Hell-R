@@ -81,17 +81,15 @@ public class SceneOneDog : MonoBehaviour, IEnemy
             ChangeState(Dog_State.idle);
     }
 
-    private void AttackState()
-    {
-    }
+    private void AttackState() { }
 
     private void HitedState() 
     {
         float dir = Player.Instance.transform.position.x - transform.position.x;
         if(dir >= 0)
-            rb.AddForce(Vector2.left * 0.5f, ForceMode2D.Impulse);
+            rb.AddForce(Vector2.left * 3f, ForceMode2D.Impulse);
         else
-            rb.AddForce(Vector2.right * 0.5f, ForceMode2D.Impulse);
+            rb.AddForce(Vector2.right * 3f, ForceMode2D.Impulse);
     }
 
     private void DiedState()
@@ -170,12 +168,6 @@ public class SceneOneDog : MonoBehaviour, IEnemy
             rb.AddForce(Vector2.right * 20, ForceMode2D.Impulse);
         else if(dir < 0)
             rb.AddForce(Vector2.left * 20, ForceMode2D.Impulse);
-        /*
-        if(dir >= 0)
-            transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x + 50, transform.position.y), (speed+25) * Time.fixedDeltaTime);
-        else if(dir < 0)        
-            transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x - 50, transform.position.y), (speed+25) * Time.fixedDeltaTime);
-        */
     }
 
     private void EndAttack() 

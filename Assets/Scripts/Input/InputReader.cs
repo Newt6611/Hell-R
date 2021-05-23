@@ -12,7 +12,7 @@ public class InputReader : ScriptableObject, M_Input.IPlayerActions
 
     private M_Input input;
 
-    private void OnEnable()
+    public void Enable() 
     {
         if(input == null)
         {
@@ -21,6 +21,14 @@ public class InputReader : ScriptableObject, M_Input.IPlayerActions
         }
 
         EnablePlayer();
+    }
+
+
+
+
+    private void OnEnable()
+    {
+        
     }
 
     public void EnablePlayer()

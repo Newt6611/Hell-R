@@ -15,8 +15,8 @@ public class AttackState : IPlayerState
 
     public void OnStateEnter() 
     {
-        int index = Random.Range(0, 2);
-        if(index == 0)
+
+        if(Physics2D.OverlapCircle(player.jump_dectector.position, player.jump_dectector_radius, player.ground_layer))
             player.ani.Play("attack");
         else
             player.ani.Play("attack2");

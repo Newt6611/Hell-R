@@ -9,7 +9,7 @@ public class JumpState : IPlayerState
 
     private bool is_jump_down = false;
     
-    private float delay_dectect_time = 0.1f;
+    private float delay_dectect_time;
     private float delay_btw;
     private bool start_dectect;
 
@@ -24,10 +24,10 @@ public class JumpState : IPlayerState
         player.ani.Play("jump_up");
         player.rb.AddForce(Vector2.up * player.Jump_Force, ForceMode2D.Impulse);
         
-        player.Can_Jump = false;
         player.Jumping = true;
         is_jump_down = false;
 
+        delay_dectect_time = 0.1f;
         delay_btw = delay_dectect_time;
         start_dectect = false;
     }
@@ -68,9 +68,7 @@ public class JumpState : IPlayerState
 
     public void OnStateExit() 
     { 
-        player.Can_Jump = true;
         player.Jumping = false;
-
     }
 
     public string GetStateName() => this.state_name;

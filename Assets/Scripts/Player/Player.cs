@@ -21,7 +21,6 @@ public class Player : MonoBehaviour
     public Vector2 Movement { get { return movement; } }
 
     private bool face_right = true;
-    public bool Can_Jump { get; set; }
     public bool Jumping { get; set;} 
 
     public bool Attacking { get; set; }
@@ -46,6 +45,11 @@ public class Player : MonoBehaviour
 
 
 
+    //
+    [SerializeField] private PhysicsMaterial2D no_friction;
+    [SerializeField] private PhysicsMaterial2D friction;
+
+
     // Components
     [SerializeField] private InputReader input_reader;
     [HideInInspector] public Rigidbody2D rb;
@@ -56,6 +60,7 @@ public class Player : MonoBehaviour
     
     private void Awake() 
     {
+        input_reader.Enable();
         if(m_instance != null && m_instance != this)
             Destroy(this);
         else
@@ -80,8 +85,6 @@ public class Player : MonoBehaviour
 
     private void Start() 
     {
-        Can_Jump = true;
-
         rb = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
         game_feel = GetComponent<GameFeel>();
@@ -113,6 +116,7 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         current_state.OnFixedUpdate();
+        UpdatePhysicsMaterial();
     }
 
     private void LateUpdate() 
@@ -138,7 +142,7 @@ public class Player : MonoBehaviour
 
     private void JumpAction()
     {
-        if(Can_Jump)
+        if(Physics2D.OverlapCircle(jump_dectector.position, jump_dectector_radius, ground_layer))
             UpdateState("jump");
     }
 
@@ -176,6 +180,13 @@ public class Player : MonoBehaviour
         current_state.OnStateEnter();
     }
 
+    private void UpdatePhysicsMaterial()
+    {
+        if(Movement.x == 0 && rb.sharedMaterial != friction)
+            rb.sharedMaterial = friction;
+        else if(Movement.x != 0 && rb.sharedMaterial != no_friction)
+            rb.sharedMaterial = no_friction;
+    }
 
     // For Animator Call
     private void Attack() 
