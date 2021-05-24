@@ -17,6 +17,8 @@ public class SceneOneDog : MonoBehaviour, IEnemy
 
     private bool face_right = true;
 
+    private int health = 3;
+
     private Dog_State current_state;
 
     // Components
@@ -94,6 +96,13 @@ public class SceneOneDog : MonoBehaviour, IEnemy
 
     private void DiedState()
     {
+        StartCoroutine(DiedDelay(3));
+    }
+
+    private IEnumerator DiedDelay(float ts) 
+    {
+        yield return new WaitForSeconds(ts);
+        Destroy(this.gameObject);
     }
 
     private void ChangeState(Dog_State next_state) 
@@ -135,6 +144,13 @@ public class SceneOneDog : MonoBehaviour, IEnemy
     public void TakeDamage(int d) 
     {
         ChangeState(Dog_State.hited);
+        health -= d;
+        if(health <= 0)
+        {
+            gameObject.layer = 11; // un_attackable layer
+            ani.Play("died");
+            ChangeState(Dog_State.died);
+        }
     }
 
 

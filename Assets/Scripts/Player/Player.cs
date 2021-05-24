@@ -11,8 +11,13 @@ public class Player : MonoBehaviour
 
     public bool draw_gizmos;
 
-    [SerializeField] private float speed;
+    private float speed; // player current speed
     public float Speed { get { return speed; } }
+
+    [SerializeField] private float normal_speed;
+    public float Normal_Speed { get { return normal_speed; } }
+    [SerializeField] private float slow_speed; // For like defend state
+    public float SlowSpeed{ get { return slow_speed; } }
 
     [SerializeField] private float jump_force;
     public float Jump_Force { get { return jump_force; } }
@@ -21,10 +26,10 @@ public class Player : MonoBehaviour
     public Vector2 Movement { get { return movement; } }
 
     private bool face_right = true;
+
     public bool Jumping { get; set;} 
-
     public bool Attacking { get; set; }
-
+    public bool Defending { get; set; }
 
     private M_Input player_input;
 
@@ -56,7 +61,7 @@ public class Player : MonoBehaviour
     [HideInInspector] public Animator ani;
     [HideInInspector] public GameFeel game_feel;
     
-    private Dictionary<string, IPlayerState> state_cache;
+    public Dictionary<string, IPlayerState> state_cache;
     
     private void Awake() 
     {
@@ -67,6 +72,7 @@ public class Player : MonoBehaviour
             m_instance = this;
 
         player_input = new M_Input();
+        speed = normal_speed;
     }
 
     private void OnEnable()
@@ -74,6 +80,8 @@ public class Player : MonoBehaviour
         input_reader.movementEvent += PlayerMoveAction;
         input_reader.jumpEvent += JumpAction;
         input_reader.attackEvent += AttackAction;
+        input_reader.defendEvent += DefendAction;
+        input_reader.defendKeyUpEvent += DefendKeyUp;
     }
 
     private void OnDisable()
@@ -81,6 +89,8 @@ public class Player : MonoBehaviour
         input_reader.movementEvent -= PlayerMoveAction;
         input_reader.jumpEvent -= JumpAction;
         input_reader.attackEvent -= AttackAction;
+        input_reader.defendEvent -= DefendAction;
+        input_reader.defendKeyUpEvent -= DefendKeyUp;
     }
 
     private void Start() 
@@ -94,7 +104,8 @@ public class Player : MonoBehaviour
             { "idle", new IdleState("idle", this) },
             { "run", new RunState("run", this) },
             { "attack", new AttackState("attack", this) },
-            { "jump", new JumpState("jump", this) }
+            { "jump", new JumpState("jump", this) },
+            { "defend", new DefendState("defend", this) }
         };
 
         current_state = state_cache["idle"];
@@ -105,7 +116,8 @@ public class Player : MonoBehaviour
     {
         current_state.OnUpdate();
 
-        //Debug.Log(current_state.GetStateName());
+        Debug.Log(current_state.GetStateName());
+        
         // Handle Sprite Flip
         if(movement.x > 0 && !face_right)
             Flip();
@@ -125,18 +137,13 @@ public class Player : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter2D(Collision2D other) 
-    {
-
-    }
-
 
 
     // Input Call Backs
     private void PlayerMoveAction(Vector2 m)
     {
         movement = m;
-        if(Mathf.Abs(movement.x) != 0 && !Jumping && !Attacking)
+        if(Mathf.Abs(movement.x) != 0 && !Jumping && !Attacking && !Defending)
             UpdateState("run");
     }
 
@@ -150,6 +157,19 @@ public class Player : MonoBehaviour
     {
         if(!Attacking)
             UpdateState("attack");
+    }
+
+    private void DefendAction()
+    {
+        UpdateState("defend");
+    }
+
+    private void DefendKeyUp()
+    {
+        if(movement.x != 0)
+            UpdateState("run");
+        else
+            UpdateState("idle");
     }
 
     ///////////////////////////////////////
@@ -167,7 +187,17 @@ public class Player : MonoBehaviour
     {
         Vector2 vel = rb.velocity;
         vel.x = Speed * Movement.x * Time.fixedDeltaTime; 
-        rb.velocity = vel;   
+        rb.velocity = vel;
+    }
+
+    public void StartMove()
+    {
+        speed = normal_speed;
+    }
+
+    public void StopMove()
+    {
+        speed = slow_speed;
     }
 
     public void UpdateState(string state_name)

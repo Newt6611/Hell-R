@@ -9,6 +9,8 @@ public class InputReader : ScriptableObject, M_Input.IPlayerActions
     public event Action<Vector2> movementEvent;
     public event Action jumpEvent;
     public event Action attackEvent;
+    public event Action defendEvent;
+    public event Action defendKeyUpEvent;
 
     private M_Input input;
 
@@ -51,5 +53,14 @@ public class InputReader : ScriptableObject, M_Input.IPlayerActions
     {
         if(context.performed)
             attackEvent?.Invoke();
+    }
+
+    public void OnDefend(InputAction.CallbackContext context) 
+    {
+        if(context.performed)
+            defendEvent?.Invoke();
+    
+        if(context.canceled)
+            defendKeyUpEvent?.Invoke();
     }
 }
