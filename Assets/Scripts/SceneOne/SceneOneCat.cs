@@ -3,235 +3,239 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-enum CatBehavior 
+enum Cat_State 
 {
-    idle, run, clean, attack, empty    
+    idle, run, attack, hited, died    
 }
 
 public class SceneOneCat : MonoBehaviour, IEnemy
 {
+    [SerializeField] bool DrawGizmos;
+    [SerializeField] private float find_player_radius;
+    [SerializeField] private float attack_radius;
+
+    [SerializeField] private Transform attack_pos;
+    [SerializeField] float attack_pos_radius;
+
     [SerializeField] private float speed;
-    public int power;
-    [SerializeField] private int health;
 
-    private bool faceRight = true;
+    private bool face_right = true;
 
-    private CatBehavior current_state;
-    private CatBehavior last_state;
+    private int health = 3;
 
-    // For Change State
-    private float timer = 5;
+    private Cat_State current_state;
 
-    // Attack
-    private bool canAttack = false;
-    private float attackTimer = 2.0f;
-    private float attackTimerBTW;
-
-    [Header("Radius")]
-    [SerializeField] private bool showGizmos;
-    [SerializeField] private float findPlayerRaidius;
-    [SerializeField] private float attackRadius;
-
-    // Component
-    private Animator ani;
+    // Components
     private Rigidbody2D rb;
+    private Animator ani;
+    private SpriteRenderer sprite_renderer;
 
-    private void Start() 
+    private void Start()
     {
-        ani = GetComponentInChildren<Animator>();
+        current_state = Cat_State.idle;
         rb = GetComponent<Rigidbody2D>();
-
-        current_state = CatBehavior.clean;
-        last_state = CatBehavior.empty;
-
+        ani = GetComponent<Animator>();
+        sprite_renderer = GetComponent<SpriteRenderer>();
+        ani.Play("idle");
     }
 
-    private void Update()
+    private void Update() 
     {
-        switch(current_state)
-        {
-            case CatBehavior.idle:
-                Idle();
-                break;
-            case CatBehavior.run:
-                Run();
-                break;
-            case CatBehavior.clean:
-                Clean();
-                break;
-            case CatBehavior.attack:
-                Attack();
-                break;
-        }
+        // if not idle state then do flip behavior;
+        FlipBehavior();
+    }
 
-        if(attackTimerBTW <= 0)
+    private void FixedUpdate()
+    {
+        switch(current_state) 
         {
-            canAttack = true;
-            attackTimerBTW = attackTimer;
+            case Cat_State.idle:
+                IdleState();
+                break;
+            case Cat_State.run:
+                RunState();
+                break;
+            case Cat_State.attack:
+                AttackState();
+                break;
+            case Cat_State.hited:
+                HitedState();
+                break;
+            case Cat_State.died:
+                DiedState();
+                break;
+        }    
+    }
+
+
+    private void IdleState() 
+    {
+        // find player is in area to chase
+        if(Physics2D.OverlapCircle(transform.position, find_player_radius, Player.Instance.player_layer))
+        {
+            ChangeState(Cat_State.run);
         }
+    }
+
+    private void RunState()
+    {
+        if(Physics2D.OverlapCircle(transform.position, attack_radius, Player.Instance.player_layer))
+            ChangeState(Cat_State.attack);
+
+        transform.position = Vector2.MoveTowards(transform.position, Player.Instance.transform.position, speed * Time.fixedDeltaTime);
+
+        // if too far, then back to idle state
+        if(!Physics2D.OverlapCircle(transform.position, find_player_radius, Player.Instance.player_layer))
+            ChangeState(Cat_State.idle);
+    }
+
+    private void AttackState() { }
+
+    private void HitedState() 
+    {
+        float dir = Player.Instance.transform.position.x - transform.position.x;
+        if(dir >= 0)
+            rb.AddForce(Vector2.left * 3f, ForceMode2D.Impulse);
         else
-            attackTimerBTW -= Time.deltaTime;
-
+            rb.AddForce(Vector2.right * 3f, ForceMode2D.Impulse);
     }
 
-    private void Idle()
+    private void DiedState()
     {
-        // For PlayAnimation
-        if(CheckState(CatBehavior.idle))
-        {
-            timer = Random.Range(4, 10);
-            // Random 2 differnt idle animation
-            int index = Random.Range(0, 2);
-            if(index == 0)
-                PlayAnimation("idle");
-            else if(index == 1)
-                PlayAnimation("idle2");
-        }
-
-        // Do Behavior
-        if(Physics2D.OverlapCircle(transform.position, attackRadius, Player.Instance.player_layer))
-        {
-            if(canAttack)
-                current_state = CatBehavior.attack;
-        }
-        else if(Physics2D.OverlapCircle(transform.position, findPlayerRaidius, Player.Instance.player_layer))
-        {
-            current_state = CatBehavior.run;
-        }
-
-        if(timer <= 0)
-        {   
-            current_state = CatBehavior.clean;
-        }
-        else
-            timer -= Time.deltaTime;
+        StartCoroutine(DiedDelay(3));
     }
 
-    // Chase Player
-    private void Run()
+    private IEnumerator DiedDelay(float ts) 
     {
-        // For PlayAnimation
-        if(CheckState(CatBehavior.run))
-        {
-            PlayAnimation("run");
-        }
+        yield return new WaitForSeconds(ts);
+        Destroy(this.gameObject);
+    }
 
-        // Do Behavior
-        if(Physics2D.OverlapCircle(transform.position, attackRadius, Player.Instance.player_layer))
-        {
-            if(canAttack)
-                current_state = CatBehavior.attack;
-        }
-        else if(!Physics2D.OverlapCircle(transform.position, findPlayerRaidius, Player.Instance.player_layer))
-        {
-            current_state = CatBehavior.idle;
-        }
+    private void ChangeState(Cat_State next_state) 
+    {
+        if(current_state == next_state)
+            return;
 
-        // Chase
-        if(Vector2.Distance(transform.position, Player.Instance.transform.position) > 1)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, Player.Instance.transform.position, speed * Time.deltaTime);
-        }
+        current_state = next_state;
+        PlayeAnimation(next_state);
+    }
+
+    private void PlayeAnimation(Cat_State state) 
+    {
+        string animation_name = GetStateAnimationName(state);
         
-        Vector2 direction = (Player.Instance.transform.position - transform.position).normalized;
-        if(direction.x > 0 && !faceRight)
-            Flip();
-        else if(direction.x < 0 && faceRight)
-            Flip();
+        ani.Play(animation_name);
+        
     }
 
-    private void Clean()
+    private string GetStateAnimationName(Cat_State state) 
     {
-        // For PlayAnimation
-        if(CheckState(CatBehavior.clean))
+        switch(state) 
         {
-            timer = Random.Range(3, 10);
-            PlayAnimation("clean");   
+            case Cat_State.idle:
+                return "idle";
+            case Cat_State.run:
+                return "run";
+            case Cat_State.attack:
+                return "attack";
+            case Cat_State.hited:
+                return "hited";
+            case Cat_State.died:
+                return "died";
         }
 
-        if(Physics2D.OverlapCircle(transform.position, findPlayerRaidius, Player.Instance.player_layer))
-        {
-            current_state = CatBehavior.run;
-        }
-
-        // Do Behavior
-        if(timer <= 0)
-        {
-            current_state = CatBehavior.idle;
-        }
-        else
-            timer -= Time.deltaTime;
-
-    }
-
-    private void Attack()
-    {
-        canAttack = false;
-        // For PlayAnimation
-        if(CheckState(CatBehavior.attack))
-        {
-            PlayAnimation("attack");   
-        }
-
-        // Flip
-        Vector2 direction = (Player.Instance.transform.position - transform.position).normalized;
-        if(direction.x > 0 && !faceRight)
-            Flip();
-        else if(direction.x < 0 && faceRight)
-            Flip();
-    }
-
-    private bool CheckState(CatBehavior state)
-    {
-        if(last_state == state)
-            return false;
-
-        last_state = current_state;
-        return true;
-    }
-
-    private void PlayAnimation(string animationName) 
-    {
-        ani.CrossFade(animationName, 0.1f);
+        return "idle";
     }
 
     public void TakeDamage(int d) 
     {
+        ChangeState(Cat_State.hited);
+        sprite_renderer.color = Color.red;
+        Invoke("ResetMaterial", 0.1f);
         health -= d;
-        Debug.Log("Cat Damaged");
+        if(health <= 0)
+        {
+            gameObject.layer = 11; // un_attackable layer
+            ani.Play("died");
+            ChangeState(Cat_State.died);
+        }
     }
 
-    public void BackOff() 
+    private void ResetMaterial()
     {
-        float xdir = transform.position.x - Player.Instance.transform.position.x;
-        xdir = xdir > 0 ? 1 : -1;
-        rb.AddForce(Vector2.right * xdir * 40, ForceMode2D.Impulse);
+        sprite_renderer.color = Color.white;
     }
 
 
-    public void BackToIdle()
+
+
+    // if not idle state then do flip behavior
+    private void FlipBehavior()
     {
-        current_state = CatBehavior.idle;
+        if(current_state == Cat_State.idle || health <= 0)
+            return;
+        float dir = Player.Instance.transform.position.x - transform.position.x;
+        if(dir >= 0 && !face_right) 
+            Flip();
+        else if(dir < 0 && face_right)
+            Flip();
     }
 
-    private void Flip()
+
+    private void Flip() 
     {
-        faceRight = !faceRight;
-        if(!faceRight)
-            transform.eulerAngles = new Vector3(0, 180, 0);
+        face_right = !face_right;
+        Vector2 scale = transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
+    }
+
+    // For Animator Call
+    private void Attack()
+    {
+        if(Physics2D.OverlapCircle(attack_pos.position, attack_pos_radius, Player.Instance.player_layer))
+        {
+            Player.Instance.TakeDamage(transform, 1);
+        }
+    }
+
+    private void EndAttack() 
+    {
+        if(!Physics2D.OverlapCircle(transform.position, attack_radius, Player.Instance.player_layer))
+            ChangeState(Cat_State.run);
+    }
+
+    private void EndHitedState() 
+    {
+        // Run
+        if(Physics2D.OverlapCircle(transform.position, find_player_radius, Player.Instance.player_layer))
+        {
+            ChangeState(Cat_State.run);
+        }
+        // Attack
+        else if(Physics2D.OverlapCircle(transform.position, attack_radius, Player.Instance.player_layer))
+        {
+            ChangeState(Cat_State.attack);
+        }
         else
-            transform.eulerAngles = Vector3.zero;
+        {
+            ChangeState(Cat_State.idle);
+        }
     }
+    //
+
 
     private void OnDrawGizmos()
     {
-        if(showGizmos)
-        {
-            Gizmos.color = Color.green;
-            Gizmos.DrawWireSphere(transform.position, findPlayerRaidius);
+        if(!DrawGizmos)
+            return;
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, find_player_radius);   
 
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawWireSphere(transform.position, attackRadius);
-        }
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attack_radius);        
+
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(attack_pos.position, attack_pos_radius);        
     }
 }

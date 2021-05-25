@@ -12,6 +12,8 @@ public class SceneOneDog : MonoBehaviour, IEnemy
     [SerializeField] bool DrawGizmos;
     [SerializeField] private float find_player_radius;
     [SerializeField] private float attack_radius;
+    [SerializeField] private Transform attack_pos;
+    [SerializeField] private float attack_pos_radius;
 
     [SerializeField] private float speed;
 
@@ -24,12 +26,14 @@ public class SceneOneDog : MonoBehaviour, IEnemy
     // Components
     private Rigidbody2D rb;
     private Animator ani;
+    private SpriteRenderer sprite_renderer;
 
     private void Start()
     {
         current_state = Dog_State.idle;
         rb = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
+        sprite_renderer = GetComponent<SpriteRenderer>();
         ani.Play("idle");
     }
 
@@ -144,6 +148,8 @@ public class SceneOneDog : MonoBehaviour, IEnemy
     public void TakeDamage(int d) 
     {
         ChangeState(Dog_State.hited);
+        sprite_renderer.color = Color.red;
+        Invoke("ResetMaterial", 0.1f);
         health -= d;
         if(health <= 0)
         {
@@ -153,11 +159,16 @@ public class SceneOneDog : MonoBehaviour, IEnemy
         }
     }
 
+    private void ResetMaterial()
+    {
+        sprite_renderer.color = Color.white;
+    }
+
 
     // if not idle state then do flip behavior
     private void FlipBehavior()
     {
-        if(current_state == Dog_State.idle)
+        if(current_state == Dog_State.idle || health <= 0)
             return;
         float dir = Player.Instance.transform.position.x - transform.position.x;
         if(dir >= 0 && !face_right) 
@@ -176,6 +187,14 @@ public class SceneOneDog : MonoBehaviour, IEnemy
     }
 
     // For Animator Call
+    private void Attack()
+    {
+        if(Physics2D.OverlapCircle(attack_pos.position, attack_pos_radius, Player.Instance.player_layer))
+        {
+            Player.Instance.TakeDamage(transform, 1);
+        }
+    }
+
     private void AttackForward()
     {
         float dir = Player.Instance.transform.position.x - transform.position.x;
@@ -218,6 +237,9 @@ public class SceneOneDog : MonoBehaviour, IEnemy
         Gizmos.DrawWireSphere(transform.position, find_player_radius);   
 
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, attack_radius);             
+        Gizmos.DrawWireSphere(transform.position, attack_radius);    
+
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(attack_pos.position, attack_pos_radius);                 
     }
 }

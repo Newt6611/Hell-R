@@ -60,6 +60,7 @@ public class Player : MonoBehaviour
     [HideInInspector] public Rigidbody2D rb;
     [HideInInspector] public Animator ani;
     [HideInInspector] public GameFeel game_feel;
+    [HideInInspector] public SpriteRenderer sprite_renderer;
     
     public Dictionary<string, IPlayerState> state_cache;
     
@@ -97,6 +98,7 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
+        sprite_renderer = GetComponent<SpriteRenderer>();
         game_feel = GetComponent<GameFeel>();
         
         state_cache = new Dictionary<string, IPlayerState>()
@@ -116,7 +118,7 @@ public class Player : MonoBehaviour
     {
         current_state.OnUpdate();
 
-        Debug.Log(current_state.GetStateName());
+        //Debug.Log(current_state.GetStateName());
         
         // Handle Sprite Flip
         if(movement.x > 0 && !face_right)
@@ -175,6 +177,22 @@ public class Player : MonoBehaviour
     ///////////////////////////////////////
     
 
+    public void TakeDamage(Transform target, int d)
+    {
+        game_feel.StopScreen(0.1f);
+        game_feel.ShakeCamera(5, 0.2f);
+        sprite_renderer.color = Color.red;
+        Invoke("ResetMaterial", 0.1f);
+        float dir = target.position.x - transform.position.x;
+        float currentX = transform.position.x;
+        if(dir >= 0)
+            currentX -= 3f;
+        else    
+            currentX += 3f;
+        
+        transform.position = new Vector2(currentX, transform.position.y);
+    }
+
     public void Flip()
     {
         face_right = !face_right;
@@ -209,6 +227,13 @@ public class Player : MonoBehaviour
         current_state = state_cache[state_name];
         current_state.OnStateEnter();
     }
+
+    private void ResetMaterial()
+    {
+        sprite_renderer.color = Color.white;
+    }
+
+
 
     private void UpdatePhysicsMaterial()
     {
