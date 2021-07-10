@@ -11,7 +11,14 @@ public class Player : MonoBehaviour
 
     public bool draw_gizmos;
 
-    private float speed; // player current speed
+
+    // Player Health
+    public int TotalHealth;
+    private int current_health;
+    public int Current_Health { get { return current_health;} }
+
+    // Player Speed Property
+    private float speed;
     public float Speed { get { return speed; } }
 
     [SerializeField] private float normal_speed;
@@ -19,6 +26,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float slow_speed; // For like defend state
     public float SlowSpeed{ get { return slow_speed; } }
 
+    // Player Jump And Movement Property
     [SerializeField] private float jump_force;
     public float Jump_Force { get { return jump_force; } }
 
@@ -110,6 +118,7 @@ public class Player : MonoBehaviour
             { "defend", new DefendState("defend", this) }
         };
 
+        current_health = TotalHealth;
         current_state = state_cache["idle"];
         current_state.OnStateEnter();
     }
@@ -179,6 +188,13 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(Transform target, int d)
     {
+        current_health -= d;
+
+        // TODO : implment dead state
+        if(current_health <= 0)
+            Debug.Log("Dead !");
+        UIManager.Instance.UpdatePlayerHealthBar();
+
         game_feel.StopScreen(0.1f);
         game_feel.ShakeCamera(5, 0.2f);
         sprite_renderer.color = Color.red;

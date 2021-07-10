@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 enum Dog_State {
     idle, attack, run, hited, died
@@ -8,7 +9,8 @@ enum Dog_State {
 
 public class SceneOneDog : MonoBehaviour, IEnemy
 {
-
+    [SerializeField] Canvas health_bar_obj;
+    [SerializeField] private Image health_bar;
     [SerializeField] bool DrawGizmos;
     [SerializeField] private float find_player_radius;
     [SerializeField] private float attack_radius;
@@ -19,7 +21,8 @@ public class SceneOneDog : MonoBehaviour, IEnemy
 
     private bool face_right = true;
 
-    private int health = 3;
+    [SerializeField] private int total_health;
+    private int current_health;
 
     private Dog_State current_state;
 
@@ -35,6 +38,8 @@ public class SceneOneDog : MonoBehaviour, IEnemy
         ani = GetComponent<Animator>();
         sprite_renderer = GetComponent<SpriteRenderer>();
         ani.Play("idle");
+
+        current_health = total_health;
     }
 
     private void Update() 
@@ -150,9 +155,12 @@ public class SceneOneDog : MonoBehaviour, IEnemy
         ChangeState(Dog_State.hited);
         sprite_renderer.color = Color.red;
         Invoke("ResetMaterial", 0.1f);
-        health -= d;
-        if(health <= 0)
+
+        current_health -= d;
+        health_bar.fillAmount = (float)current_health / (float)total_health;
+        if(current_health <= 0)
         {
+            health_bar_obj.gameObject.SetActive(false);
             gameObject.layer = 11; // un_attackable layer
             ani.Play("died");
             ChangeState(Dog_State.died);
@@ -168,13 +176,17 @@ public class SceneOneDog : MonoBehaviour, IEnemy
     // if not idle state then do flip behavior
     private void FlipBehavior()
     {
-        if(current_state == Dog_State.idle || health <= 0)
+        if(current_state == Dog_State.idle || current_health <= 0)
             return;
         float dir = Player.Instance.transform.position.x - transform.position.x;
-        if(dir >= 0 && !face_right) 
+        if(dir >= 0 && !face_right) {
+            health_bar.fillOrigin = 0; // 0 for left, 1 for right
             Flip();
-        else if(dir < 0 && face_right)
+        }
+        else if(dir < 0 && face_right) {
+            health_bar.fillOrigin = 1;
             Flip();
+        }
     }
 
 

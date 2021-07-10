@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 enum Cat_State 
 {
@@ -10,6 +10,8 @@ enum Cat_State
 
 public class SceneOneCat : MonoBehaviour, IEnemy
 {
+    [SerializeField] Canvas health_bar_obj;
+    [SerializeField] private Image health_bar;
     [SerializeField] bool DrawGizmos;
     [SerializeField] private float find_player_radius;
     [SerializeField] private float attack_radius;
@@ -21,7 +23,8 @@ public class SceneOneCat : MonoBehaviour, IEnemy
 
     private bool face_right = true;
 
-    private int health = 3;
+    [SerializeField] private int total_health;
+    private int current_health;
 
     private Cat_State current_state;
 
@@ -37,6 +40,7 @@ public class SceneOneCat : MonoBehaviour, IEnemy
         ani = GetComponent<Animator>();
         sprite_renderer = GetComponent<SpriteRenderer>();
         ani.Play("idle");
+        current_health = total_health;
     }
 
     private void Update() 
@@ -152,9 +156,12 @@ public class SceneOneCat : MonoBehaviour, IEnemy
         ChangeState(Cat_State.hited);
         sprite_renderer.color = Color.red;
         Invoke("ResetMaterial", 0.1f);
-        health -= d;
-        if(health <= 0)
+
+        current_health -= d;
+        health_bar.fillAmount = (float)current_health / (float)total_health;
+        if(current_health <= 0)
         {
+            health_bar_obj.gameObject.SetActive(false);
             gameObject.layer = 11; // un_attackable layer
             ani.Play("died");
             ChangeState(Cat_State.died);
@@ -172,13 +179,17 @@ public class SceneOneCat : MonoBehaviour, IEnemy
     // if not idle state then do flip behavior
     private void FlipBehavior()
     {
-        if(current_state == Cat_State.idle || health <= 0)
+        if(current_state == Cat_State.idle || current_health <= 0)
             return;
         float dir = Player.Instance.transform.position.x - transform.position.x;
-        if(dir >= 0 && !face_right) 
+        if(dir >= 0 && !face_right) {
+            health_bar.fillOrigin = 0;
             Flip();
-        else if(dir < 0 && face_right)
+        }
+        else if(dir < 0 && face_right) {
+            health_bar.fillOrigin = 1;
             Flip();
+        }
     }
 
 

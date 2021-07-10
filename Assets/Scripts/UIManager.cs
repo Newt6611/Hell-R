@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
     private static UIManager m_instance;
     public static UIManager Instance { get { return m_instance; } }
+
+
+    [SerializeField] public Image healthBar;
 
     private Animator ani;
 
@@ -20,6 +24,16 @@ public class UIManager : MonoBehaviour
             m_instance = this;
 
         ani = GetComponent<Animator>();
+    }
+
+    private void Start() 
+    {
+        UpdatePlayerHealthBar();
+    }
+
+    public void UpdatePlayerHealthBar()
+    {
+        healthBar.fillAmount = (float)Player.Instance.Current_Health / (float)Player.Instance.TotalHealth;        
     }
 
     public void Fade(Vector2 next_position) 
