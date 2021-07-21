@@ -193,9 +193,10 @@ public class SceneOneDog : MonoBehaviour, IEnemy
     private void Flip() 
     {
         face_right = !face_right;
-        Vector2 scale = transform.localScale;
-        scale.x *= -1;
-        transform.localScale = scale;
+        if(face_right)
+            transform.eulerAngles = Vector3.zero;
+        else
+            transform.eulerAngles = new Vector3(0, 180, 0);
     }
 
     // For Animator Call

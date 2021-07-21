@@ -1129,7 +1129,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.72883207, y: 0.22145054, z: -10}
+  m_LocalPosition: {x: 5.84, y: 0.22, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1418,7 +1418,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 20
   m_TargetDisplay: 0
 --- !u!224 &584245788
 RectTransform:
@@ -1586,7 +1586,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 667454762}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3, y: 0.22, z: 0}
+  m_LocalPosition: {x: 5.84, y: 0.22, z: 0}
   m_LocalScale: {x: 1.0527219, y: 1.0527219, z: 1.0527219}
   m_Children:
   - {fileID: 1538035526}
@@ -1918,7 +1918,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 788734543}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3, y: 0.22, z: -10}
+  m_LocalPosition: {x: 5.84, y: 0.22, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1182558290}
@@ -2385,10 +2385,10 @@ MonoBehaviour:
   health_bar_obj: {fileID: 1438980620}
   health_bar: {fileID: 1063440300}
   DrawGizmos: 1
-  find_player_radius: 9.94
-  attack_radius: 3.03
+  find_player_radius: 8.67
+  attack_radius: 3.27
   attack_pos: {fileID: 2029975253}
-  attack_pos_radius: 0.93
+  attack_pos_radius: 0.9
   speed: 2.5
   total_health: 3
 --- !u!1 &1004188428
@@ -3716,7 +3716,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 20
   m_TargetDisplay: 0
 --- !u!1 &1443513809
 GameObject:
@@ -4307,7 +4307,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1892182254}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.9095247, y: -0.99, z: -9.356379}
+  m_LocalPosition: {x: 3.9095247, y: -1.33, z: -9.356379}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1216258674}
@@ -4510,7 +4510,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5624334141632426909, guid: d499a442f602f614599aaad5c3befe40, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.204
+      value: -1.4
       objectReference: {fileID: 0}
     - target: {fileID: 5624334141632426909, guid: d499a442f602f614599aaad5c3befe40, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4586,7 +4586,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5624334141632426914, guid: d499a442f602f614599aaad5c3befe40, type: 3}
       propertyPath: DrawGizmos
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5624334141632426914, guid: d499a442f602f614599aaad5c3befe40, type: 3}
       propertyPath: attack_pos

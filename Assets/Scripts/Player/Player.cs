@@ -167,7 +167,12 @@ public class Player : MonoBehaviour
     private void AttackAction() 
     {
         if(!Attacking)
+        {
+            if(UIManager.Instance.StaminaBar.fillAmount <= 0.15f)
+                return;
+            UIManager.Instance.ReduceStamina(0.25f);
             UpdateState("attack");
+        }
     }
 
     private void DefendAction()

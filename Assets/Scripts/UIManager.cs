@@ -8,8 +8,11 @@ public class UIManager : MonoBehaviour
     private static UIManager m_instance;
     public static UIManager Instance { get { return m_instance; } }
 
+    public Image StaminaBar { get { return staminaBar; } }
 
-    [SerializeField] public Image healthBar;
+    [SerializeField] private Image healthBar;
+    [SerializeField] private Image staminaBar;
+
 
     private Animator ani;
 
@@ -31,9 +34,20 @@ public class UIManager : MonoBehaviour
         UpdatePlayerHealthBar();
     }
 
+    private void Update()
+    {
+        if(staminaBar.fillAmount < 1)
+            staminaBar.fillAmount += 0.0005f;
+    }
+
     public void UpdatePlayerHealthBar()
     {
         healthBar.fillAmount = (float)Player.Instance.Current_Health / (float)Player.Instance.TotalHealth;        
+    }
+
+    public void ReduceStamina(float percentage)
+    {
+        staminaBar.fillAmount -= percentage;
     }
 
     public void Fade(Vector2 next_position) 
