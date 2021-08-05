@@ -40,7 +40,6 @@ public class GameFeel : MonoBehaviour
         Time.timeScale = 1.0f;
         stoping = false;
     }
-
     ///////////////////////////////////////////////
 
     ///////// Shake Camera ///////////////////////

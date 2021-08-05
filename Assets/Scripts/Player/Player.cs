@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System;
 
 public class Player : MonoBehaviour
 {
@@ -72,6 +73,10 @@ public class Player : MonoBehaviour
     
     public Dictionary<string, IPlayerState> state_cache;
     
+
+    public event Action player_into_door_use_keyboard;
+
+
     private void Awake() 
     {
         input_reader.Enable();
@@ -91,6 +96,7 @@ public class Player : MonoBehaviour
         input_reader.attackEvent += AttackAction;
         input_reader.defendEvent += DefendAction;
         input_reader.defendKeyUpEvent += DefendKeyUp;
+        input_reader.intoDoorEvent += IntoDoorAction;
     }
 
     private void OnDisable()
@@ -100,6 +106,7 @@ public class Player : MonoBehaviour
         input_reader.attackEvent -= AttackAction;
         input_reader.defendEvent -= DefendAction;
         input_reader.defendKeyUpEvent -= DefendKeyUp;
+        input_reader.intoDoorEvent -= IntoDoorAction;
     }
 
     private void Start() 
@@ -186,6 +193,11 @@ public class Player : MonoBehaviour
             UpdateState("run");
         else
             UpdateState("idle");
+    }
+
+    private void IntoDoorAction()
+    {
+        player_into_door_use_keyboard?.Invoke();
     }
 
     ///////////////////////////////////////

@@ -11,6 +11,11 @@ public class InputReader : ScriptableObject, M_Input.IPlayerActions
     public event Action attackEvent;
     public event Action defendEvent;
     public event Action defendKeyUpEvent;
+    public event Action intoDoorEvent;
+
+
+
+    public event Action controlChangeEvent;
 
     private M_Input input;
 
@@ -28,15 +33,26 @@ public class InputReader : ScriptableObject, M_Input.IPlayerActions
 
 
 
-    private void OnEnable()
-    {
-        
-    }
-
     public void EnablePlayer()
     {
         input.Player.Enable();
     }
+
+    public void DisablePlayer()
+    {
+        input.Player.Disable();
+    }
+
+
+
+    public void OnControllerChange()
+    {
+        controlChangeEvent?.Invoke();
+    }
+
+
+
+
 
     public void OnMove(InputAction.CallbackContext context) 
     {
@@ -62,5 +78,11 @@ public class InputReader : ScriptableObject, M_Input.IPlayerActions
     
         if(context.canceled)
             defendKeyUpEvent?.Invoke();
+    }
+
+    public void OnIntoDoor(InputAction.CallbackContext context)
+    {
+        if(context.performed)
+            intoDoorEvent?.Invoke();
     }
 }

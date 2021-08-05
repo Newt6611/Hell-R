@@ -35,6 +35,10 @@ public class SceneOneCat : MonoBehaviour, IEnemy
 
     private void Start()
     {
+        SceneOneManager.Instance.RegistDarkObj(this.gameObject);
+        if(SceneOneManager.Instance.Mode == SceneOneMode.normal)
+            gameObject.SetActive(false);
+
         current_state = Cat_State.idle;
         rb = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
@@ -233,8 +237,13 @@ public class SceneOneCat : MonoBehaviour, IEnemy
             ChangeState(Cat_State.idle);
         }
     }
-    //
 
+    
+    //
+    private void OnDestroy() 
+    {
+        SceneOneManager.Instance.RemoveDarkObj(gameObject);
+    }
 
     private void OnDrawGizmos()
     {

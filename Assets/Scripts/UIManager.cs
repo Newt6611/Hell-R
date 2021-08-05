@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class UIManager : MonoBehaviour
 {
@@ -14,6 +15,12 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Image staminaBar;
 
 
+    public GameObject player_stuff;
+
+    public GameObject scene_one_boss_stuff;
+    public Image scene_one_boss_healthBar;
+
+    public Animator animator { get { return ani; } }
     private Animator ani;
 
     // For Player Transition In Same Scene
@@ -38,6 +45,13 @@ public class UIManager : MonoBehaviour
     {
         if(staminaBar.fillAmount < 1)
             staminaBar.fillAmount += 0.0005f;
+    
+
+        if(Keyboard.current.gKey.wasPressedThisFrame)
+        {
+            ani.Play("fade5s");
+            
+        }
     }
 
     public void UpdatePlayerHealthBar()
@@ -59,5 +73,18 @@ public class UIManager : MonoBehaviour
     private void SendPlayerToNextSpot()
     {
         Player.Instance.transform.position = next_spot;
+    }
+
+
+    // SceneOne 
+    public void SceneOneStartShaking()
+    {
+        Debug.Log("g");
+        SceneOneManager.Instance.StartModeChanging();
+    }
+
+    public void SceneOneUpdateCorridor()
+    {
+        SceneOneManager.Instance.UpdateCorridor();
     }
 }

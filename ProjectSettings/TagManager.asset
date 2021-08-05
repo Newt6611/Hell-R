@@ -17,8 +17,8 @@ TagManager:
   - attackable
   - player
   - un_attackable
-  - 
-  - 
+  - fire_ball
+  - limit
   - 
   - 
   - 
