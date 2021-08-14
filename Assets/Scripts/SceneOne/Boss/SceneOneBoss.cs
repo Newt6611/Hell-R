@@ -114,4 +114,7 @@ public class SceneOneBoss : MonoBehaviour, IEnemy
         Gizmos.color = Color.grey;
         Gizmos.DrawWireSphere(transform.position, crack_radius);
     }
+
+    public void SetSpawner(SceneOneMonsterSpawner spawner) {}
+    public void SetMode(bool is_dark) {}
 }

@@ -13,12 +13,18 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private Image healthBar;
     [SerializeField] private Image staminaBar;
-
+    
+    // Scene One
+    [SerializeField] private Image hateBar;
+    private bool shaking = false;
+    public bool Shaking { get { return shaking; } }
 
     public GameObject player_stuff;
 
     public GameObject scene_one_boss_stuff;
     public Image scene_one_boss_healthBar;
+
+    public InputReader input_reader;
 
     public Animator animator { get { return ani; } }
     private Animator ani;
@@ -50,7 +56,6 @@ public class UIManager : MonoBehaviour
         if(Keyboard.current.gKey.wasPressedThisFrame)
         {
             ani.Play("fade5s");
-            
         }
     }
 
@@ -77,14 +82,31 @@ public class UIManager : MonoBehaviour
 
 
     // SceneOne 
+    public void UpdateHateValue()
+    {
+        hateBar.fillAmount = SceneOneManager.Instance.Current_Hate_Value / SceneOneManager.Instance.Total_Hate_Value;
+    }
+
     public void SceneOneStartShaking()
     {
-        Debug.Log("g");
+        input_reader.DisablePlayer();
         SceneOneManager.Instance.StartModeChanging();
+        shaking = true;
+    }
+
+    public void SceneOneShakingEnd()
+    {
+        shaking = false;
     }
 
     public void SceneOneUpdateCorridor()
     {
         SceneOneManager.Instance.UpdateCorridor();
+    }
+
+    public void EnablePlayerIput()
+    {
+        shaking = false;
+        input_reader.EnablePlayer();
     }
 }

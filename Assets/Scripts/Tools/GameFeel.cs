@@ -22,8 +22,6 @@ public class GameFeel : MonoBehaviour
         current_cam = brain.ActiveVirtualCamera as CinemachineVirtualCamera;
     }
 
-
-
     ///////// Stop Screen /////////////////////////
     public void StopScreen(float time) 
     {
@@ -45,6 +43,8 @@ public class GameFeel : MonoBehaviour
     ///////// Shake Camera ///////////////////////
     public void ShakeCamera(float intensity, float time)
     {
+        if(UIManager.Instance.Shaking)
+            return;
         if(shaking)
             return;
 

@@ -1,6 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public enum SceneOneMode {
     normal, dark
@@ -11,9 +15,25 @@ public class SceneOneManager : MonoBehaviour
     private static SceneOneManager m_instance;
     public static SceneOneManager Instance { get { return m_instance; } }
 
-    private SceneOneMode mode;
-    public SceneOneMode Mode { get { return mode; } }
+    public event Action on_dark_mode;
+    public event Action on_normal_mode;
 
+    // Image Effects
+    [SerializeField] private Light2D global_light;
+    [SerializeField] private Volume volume;
+    private Bloom bloom;
+    private Vignette vignette;
+    private ChromaticAberration chromatic_aberration;
+    /////////////////////
+
+    // Player ///////
+    public float Total_Hate_Value;
+    public float Current_Hate_Value;
+    ////////////////
+
+    [SerializeField] private SceneOneMode mode;
+    public SceneOneMode Mode { get { return mode; } }
+    
     [SerializeField] private Sprite normal_corridor;
     [SerializeField] private Sprite dark_corridor;
 
@@ -25,14 +45,15 @@ public class SceneOneManager : MonoBehaviour
     [SerializeField] private Sprite dark_chair;
 
 
-
-
     [SerializeField] private List<SpriteRenderer> corridors;
     [SerializeField] private SpriteRenderer classroom;
     [SerializeField] private SpriteRenderer classroom_chair;
 
-    private List<GameObject> dark_objs;
-    private List<GameObject> normal_objs;
+
+    public int NormalObjCount { get { return normal_obj.Count; } }
+    public int DarkObjCount { get { return dark_obj.Count; } }
+    private List<GameObject> normal_obj;
+    private List<GameObject> dark_obj;
 
     public void Awake()
     {
@@ -40,34 +61,63 @@ public class SceneOneManager : MonoBehaviour
             Destroy(this);
         else
             m_instance = this;
-        dark_objs = new List<GameObject>();
-        normal_objs = new List<GameObject>();
+
+        normal_obj = new List<GameObject>();
+        dark_obj = new List<GameObject>();
     }
 
     private void Start() 
     {
         mode = SceneOneMode.normal;
+
+        Total_Hate_Value = 100;
+        Current_Hate_Value = 0;
+
+        volume.profile.TryGet(out bloom);
+        volume.profile.TryGet(out vignette);
+        volume.profile.TryGet(out chromatic_aberration);
+
+        if(mode == SceneOneMode.normal)
+            ToNormal();
+        else
+            ToDark();
     }
 
+    public void RegisterNormalObj(GameObject obj) => normal_obj.Add(obj);
 
-    public void RegistDarkObj(GameObject obj) 
-    {
-        dark_objs.Add(obj);
-    }
+    public void RemoveNormalObj(GameObject obj) => normal_obj.Remove(obj);
 
-    public void RegestNormalObj(GameObject obj)
-    {
-        normal_objs.Add(obj);
-    }
+    public void RegisterDarkObj(GameObject obj) => dark_obj.Add(obj);
 
-    public void RemoveDarkObj(GameObject obj) 
-    {
-        dark_objs.Remove(obj);
-    }
+    public void RemoveDarkObj(GameObject obj) => dark_obj.Remove(obj);
 
-    public void RemoveNormalObj(GameObject obj) 
+    private void Update() 
     {
-        normal_objs.Remove(obj);
+        /// Controlling HateValue With SceneMode
+        if(mode == SceneOneMode.normal)
+        {
+            if(Current_Hate_Value < 100)
+            {
+                Current_Hate_Value += 3 * Time.deltaTime;
+                UIManager.Instance.UpdateHateValue();
+            }
+            else if(Current_Hate_Value >= 100)
+            {
+                UIManager.Instance.animator.Play("fade5s");
+            }
+        }
+        else if(mode == SceneOneMode.dark)
+        {
+            if(Current_Hate_Value > 10)
+            {
+                Current_Hate_Value -= 3 * Time.deltaTime;
+                UIManager.Instance.UpdateHateValue();
+            }
+            else if(Current_Hate_Value <= 10)
+            {
+                UIManager.Instance.animator.Play("fade5s");
+            }
+        }
     }
 
 
@@ -91,39 +141,55 @@ public class SceneOneManager : MonoBehaviour
 
     private void ToNormal()
     {
+        mode = SceneOneMode.normal;
+        on_normal_mode?.Invoke();
+
+        // update light
+        global_light.intensity = 1;
+        bloom.intensity.value = 0f;
+        vignette.active = false;
+        chromatic_aberration.active = false;
+        
+        // update corridors
         foreach(SpriteRenderer renderer in corridors)
             renderer.sprite = normal_corridor;
 
-        classroom.sprite = normal_classroom;
-        classroom_chair.sprite = normal_chair;
-
-        // update objs
-        foreach(GameObject obj in normal_objs)
+        // update animals
+        foreach(GameObject obj in normal_obj)
             obj.SetActive(true);
-        
-        foreach(GameObject obj in dark_objs)
+
+        foreach(GameObject obj in dark_obj)
             obj.SetActive(false);
 
-        mode = SceneOneMode.normal;
+        classroom.sprite = normal_classroom;
+        classroom_chair.sprite = normal_chair;
+        
+        Current_Hate_Value = 0;
     }
 
     private void ToDark()
     {
+        mode = SceneOneMode.dark;
+        on_dark_mode?.Invoke();
+
+        // update light
+        global_light.intensity = 0.4f;
+        bloom.intensity.value = 1.0f;
+        vignette.active = true;
+        chromatic_aberration.active = true;
+
+        // update corridors
         foreach(SpriteRenderer renderer in corridors)
             renderer.sprite = dark_corridor;
 
-        classroom.sprite = dark_classroom;
-        classroom_chair.sprite = dark_chair;
-        
-        // update objs
-        foreach(GameObject obj in dark_objs)
+        // update animals
+        foreach(GameObject obj in dark_obj)
             obj.SetActive(true);
-        
-        foreach(GameObject obj in normal_objs)
+
+        foreach(GameObject obj in normal_obj)
             obj.SetActive(false);
 
-        mode = SceneOneMode.dark;
+        classroom.sprite = dark_classroom;
+        classroom_chair.sprite = dark_chair;
     }
-
-    
 }

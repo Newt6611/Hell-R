@@ -11,7 +11,7 @@ public class RoomPlayerTransition : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
-        if(keybord_input)
+        if(keybord_input && other.CompareTag("Player"))
         {
             Player.Instance.player_into_door_use_keyboard += Into;
             
@@ -35,6 +35,14 @@ public class RoomPlayerTransition : MonoBehaviour
 
     private void Into() 
     {
-        UIManager.Instance.Fade(next_spot.position);
+        if(next_spot == null)
+        {
+            UIManager.Instance.Fade(Player.Instance.pre_pos.position);
+        }
+        else
+        {
+            UIManager.Instance.Fade(next_spot.position);
+        }
+        Player.Instance.pre_pos = transform;
     }
 }

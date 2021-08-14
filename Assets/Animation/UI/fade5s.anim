@@ -139,8 +139,22 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 2.4166667
+  - time: 2.4
     functionName: SceneOneUpdateCorridor
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 5
+    functionName: EnablePlayerIput
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 6.016667
+    functionName: SceneOneShakingEnd
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

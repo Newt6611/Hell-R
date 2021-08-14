@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class Player : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class Player : MonoBehaviour
 
     public bool draw_gizmos;
 
+    // Prepos For Scene Transition ( in same scene )
+    public Transform pre_pos;
 
     // Player Health
     public int TotalHealth;
@@ -57,7 +60,7 @@ public class Player : MonoBehaviour
     public float attack_dectector_radius;
     public LayerMask attackable_layer;
 
-
+    private Light2D light;
 
     //
     [SerializeField] private PhysicsMaterial2D no_friction;
@@ -111,6 +114,9 @@ public class Player : MonoBehaviour
 
     private void Start() 
     {
+        SceneOneManager.Instance.on_normal_mode += OnNormalMode;
+        SceneOneManager.Instance.on_dark_mode += OnDarkMode;
+        light = GetComponentInChildren<Light2D>();
         rb = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
         sprite_renderer = GetComponent<SpriteRenderer>();
@@ -296,6 +302,19 @@ public class Player : MonoBehaviour
             UpdateState("run");
     }
     ////////////////////////////////////////////////
+
+    // scene one
+    private void OnNormalMode()
+    {
+        //0.8
+        light.intensity = 0.5f;
+    }
+
+    private void OnDarkMode()
+    {
+        //0.5
+        light.intensity = 1f;
+    }
 
     private void OnDrawGizmos()
     {

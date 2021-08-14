@@ -1191,9 +1191,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 777242077}
   staminaBar: {fileID: 2085875529}
+  hateBar: {fileID: 340042577}
   player_stuff: {fileID: 335846532}
   scene_one_boss_stuff: {fileID: 74049015}
   scene_one_boss_healthBar: {fileID: 383461698}
+  input_reader: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
 --- !u!1 &889529115
 GameObject:
   m_ObjectHideFlags: 0

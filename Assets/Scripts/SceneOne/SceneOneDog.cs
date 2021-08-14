@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Experimental.Rendering.Universal;
 
 enum Dog_State {
-    idle, attack, run, hited, died
+    none, idle, attack, run, hited, died
 }
 
 public class SceneOneDog : MonoBehaviour, IEnemy
@@ -26,30 +27,92 @@ public class SceneOneDog : MonoBehaviour, IEnemy
 
     private Dog_State current_state;
 
+    [SerializeField] private Light2D light;
+
     // Components
     private Rigidbody2D rb;
     private Animator ani;
     private SpriteRenderer sprite_renderer;
+    private TrailRenderer trail_renderer;
+
+    private SceneOneMonsterSpawner spawner;
+    public bool is_dark;
 
     private void Start()
     {
-        SceneOneManager.Instance.RegistDarkObj(this.gameObject);
-        if(SceneOneManager.Instance.Mode == SceneOneMode.normal)
-            gameObject.SetActive(false);
-
-        current_state = Dog_State.idle;
+        current_state = Dog_State.none;
         rb = GetComponent<Rigidbody2D>();
-        ani = GetComponent<Animator>();
         sprite_renderer = GetComponent<SpriteRenderer>();
-        ani.Play("idle");
 
         current_health = total_health;
     }
+
+    public void SetSpawner(SceneOneMonsterSpawner spawner) => this.spawner = spawner;
+
+    public void SetMode(bool is_dark) => this.is_dark = is_dark;
 
     private void Update() 
     {
         // if not idle state then do flip behavior;
         FlipBehavior();
+    }
+
+    private IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(Random.Range(1.5f, 3.0f));
+        
+        // checking distant if too far then delete
+        if(is_dark && SceneOneManager.Instance.Mode == SceneOneMode.dark)
+            CheckDistance();
+        else if(!is_dark && SceneOneManager.Instance.Mode == SceneOneMode.normal)
+            CheckDistance();
+
+        if(trail_renderer == null)
+            trail_renderer = GetComponentInChildren<TrailRenderer>();
+        if(ani == null)
+            ani = GetComponent<Animator>();
+        trail_renderer.enabled = true;
+
+        if(is_dark)
+            light.enabled = true;
+        else
+            light.enabled = false;
+        current_state = Dog_State.none;
+        trail_renderer.enabled = true;
+        ani.Play("spawn");
+    }
+
+    private void CheckDistance()
+    {
+        if(Vector2.Distance(Player.Instance.transform.position, transform.position) > 15)
+        {
+            if(is_dark)
+                SceneOneManager.Instance.RemoveDarkObj(gameObject);
+            else
+                SceneOneManager.Instance.RemoveNormalObj(gameObject);
+            Destroy(this.gameObject);
+        }
+    }
+
+    private void OnEnable() 
+    {
+        StartCoroutine(Delay());
+    }
+
+    private void OnDisable()
+    {
+        sprite_renderer.enabled = false;
+        health_bar_obj.gameObject.SetActive(false);
+        current_state = Dog_State.none;
+    }
+
+    private void Spawn() 
+    {
+        trail_renderer.enabled = false;
+        health_bar_obj.gameObject.SetActive(true);
+        
+        sprite_renderer.enabled = true;
+        current_state = Dog_State.idle;
     }
 
     private void FixedUpdate()
@@ -109,7 +172,7 @@ public class SceneOneDog : MonoBehaviour, IEnemy
 
     private void DiedState()
     {
-        StartCoroutine(DiedDelay(3));
+        StartCoroutine(DiedDelay(5));
     }
 
     private IEnumerator DiedDelay(float ts) 
@@ -168,6 +231,10 @@ public class SceneOneDog : MonoBehaviour, IEnemy
             gameObject.layer = 11; // un_attackable layer
             ani.Play("died");
             ChangeState(Dog_State.died);
+            if(is_dark)
+                SceneOneManager.Instance.RemoveDarkObj(gameObject);
+            else
+                SceneOneManager.Instance.RemoveNormalObj(gameObject);
         }
     }
 
@@ -244,11 +311,6 @@ public class SceneOneDog : MonoBehaviour, IEnemy
         {
             ChangeState(Dog_State.idle);
         }
-    }
-
-    private void OnDestroy() 
-    {
-        SceneOneManager.Instance.RemoveDarkObj(gameObject);
     }
 
     private void OnDrawGizmos()
