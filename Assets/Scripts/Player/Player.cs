@@ -128,7 +128,8 @@ public class Player : MonoBehaviour
             { "run", new RunState("run", this) },
             { "attack", new AttackState("attack", this) },
             { "jump", new JumpState("jump", this) },
-            { "defend", new DefendState("defend", this) }
+            { "defend", new DefendState("defend", this) },
+            { "hited", new HitedState("hited", this) }
         };
 
         current_health = TotalHealth;
@@ -212,23 +213,22 @@ public class Player : MonoBehaviour
     public void TakeDamage(Transform target, int d)
     {
         current_health -= d;
-
-        // TODO : implment dead state
-        if(current_health <= 0)
-            Debug.Log("Dead !");
-        UIManager.Instance.UpdatePlayerHealthBar();
-
-        game_feel.StopScreen(0.1f);
-        game_feel.ShakeCamera(5, 0.2f);
-        sprite_renderer.color = Color.red;
+        UpdateState("hited");
         Invoke("ResetMaterial", 0.1f);
         float dir = target.position.x - transform.position.x;
         float currentX = transform.position.x;
+
+        if(dir >= 0 && !face_right)
+            Flip();
+        else if(dir < 0 && face_right)
+            Flip();
+
+
         if(dir >= 0)
             currentX -= 3f;
         else    
             currentX += 3f;
-        
+
         transform.position = new Vector2(currentX, transform.position.y);
     }
 

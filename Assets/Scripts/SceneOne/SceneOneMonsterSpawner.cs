@@ -22,12 +22,12 @@ public class SceneOneMonsterSpawner : MonoBehaviour
         SceneOneManager.Instance.on_dark_mode += OnDarkMode;
         SceneOneManager.Instance.on_normal_mode += OnNormalMode;
         time_to_spawn_btw = 10;
+        base_spawn_time = 10;
     }
 
     private void Update() 
     {
         transform.position = Player.Instance.transform.position;
-        Debug.Log(spawn);
         if(!spawn)
             return;
         if(SceneOneManager.Instance.Mode == SceneOneMode.normal)
@@ -42,7 +42,7 @@ public class SceneOneMonsterSpawner : MonoBehaviour
 
     private void Timer(int enemys_count)
     {
-        if(time_to_spawn_btw <= 0 && enemys_count <= max_amount)
+        if(time_to_spawn_btw < 0 && enemys_count <= max_amount)
             Spawn();
         else
             time_to_spawn_btw -= Time.deltaTime;
@@ -50,6 +50,8 @@ public class SceneOneMonsterSpawner : MonoBehaviour
 
     private void Spawn()
     {
+        time_to_spawn_btw = base_spawn_time - Random.Range(0, 2);
+
         int index = Random.Range(0, 2);
         GameObject enemy;
         if(index == 0)
@@ -64,8 +66,6 @@ public class SceneOneMonsterSpawner : MonoBehaviour
             SceneOneManager.Instance.RegisterNormalObj(enemy);
         else
             SceneOneManager.Instance.RegisterDarkObj(enemy);
-
-        time_to_spawn_btw = base_spawn_time - Random.Range(0, 2);
     }
 
     private Vector2 RandomPos()
@@ -88,7 +88,7 @@ public class SceneOneMonsterSpawner : MonoBehaviour
 
     private void OnNormalMode()
     {
-        max_amount = 4;
+        max_amount = 2;
         base_spawn_time = 8;
     }
 

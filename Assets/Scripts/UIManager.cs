@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
     public Image StaminaBar { get { return staminaBar; } }
 
     [SerializeField] private Image healthBar;
+    [SerializeField] private Image healthBarBack;
     [SerializeField] private Image staminaBar;
     
     // Scene One
@@ -53,6 +54,11 @@ public class UIManager : MonoBehaviour
             staminaBar.fillAmount += 0.0005f;
     
 
+
+        // For Player's "BACK" Health Bar
+        if(healthBarBack.fillAmount > healthBar.fillAmount)
+            healthBarBack.fillAmount -= Time.deltaTime;
+            
         if(Keyboard.current.gKey.wasPressedThisFrame)
         {
             ani.Play("fade5s");

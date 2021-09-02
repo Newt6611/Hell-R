@@ -123,7 +123,7 @@ public class SceneOneManager : MonoBehaviour
 
     public void StartModeChanging()
     {
-        Camera.main.GetComponent<GameFeel>().ShakeCamera(20.0f, 5.0f);
+        Camera.main.GetComponent<GameFeel>().ShakeCamera(20.0f, 5.0f, true);
     }
 
     public void UpdateCorridor() 

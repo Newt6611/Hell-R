@@ -41,16 +41,16 @@ public class GameFeel : MonoBehaviour
     ///////////////////////////////////////////////
 
     ///////// Shake Camera ///////////////////////
-    public void ShakeCamera(float intensity, float time)
+    public void ShakeCamera(float intensity, float time, bool fromUIManager = false)
     {
         if(UIManager.Instance.Shaking)
             return;
-        if(shaking)
-            return;
-
-        CinemachineBasicMultiChannelPerlin perlin = current_cam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
-        perlin.m_AmplitudeGain = intensity;
-        StartCoroutine(WatingShake(time, perlin));
+        if(fromUIManager || !shaking)
+        {
+            CinemachineBasicMultiChannelPerlin perlin = current_cam.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+            perlin.m_AmplitudeGain = intensity;
+            StartCoroutine(WatingShake(time, perlin));
+        }
     }
 
     private IEnumerator WatingShake(float time, CinemachineBasicMultiChannelPerlin perlin)
