@@ -57,6 +57,62 @@ public class @M_Input : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""ItemOne"",
+                    ""type"": ""Button"",
+                    ""id"": ""b3b1cc22-29d7-44a8-b42f-58b77b141270"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""ItemTwo"",
+                    ""type"": ""Button"",
+                    ""id"": ""b06efda3-65b8-438a-8fe0-73487e70d867"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""ItemThree"",
+                    ""type"": ""Button"",
+                    ""id"": ""38e09b1d-05d0-4ed9-ae2e-31ca0895a2dc"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""ItemFour"",
+                    ""type"": ""Button"",
+                    ""id"": ""9ea5600a-9073-4906-870d-7c43fbd382d3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""ItemFive"",
+                    ""type"": ""Button"",
+                    ""id"": ""06ef9f39-5c50-4f65-9280-f0584939fe65"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""GetItem"",
+                    ""type"": ""Button"",
+                    ""id"": ""9ad52125-ad9c-4a90-9924-3f75a2970ca0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""UseItem"",
+                    ""type"": ""Button"",
+                    ""id"": ""cf740c6d-ec08-4516-903b-e6da57834822"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -246,6 +302,83 @@ public class @M_Input : IInputActionCollection, IDisposable
                     ""action"": ""IntoDoor"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4cb00dea-247d-4c67-8c95-e526c0b18a53"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""ItemOne"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b8df3a10-3003-470c-bcb9-e04acd21441e"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""ItemTwo"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c095bb86-afdf-4b4f-aeab-71682d980fd0"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""ItemThree"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""65d07f77-c77f-4345-becf-a4278cf8b67b"",
+                    ""path"": ""<Keyboard>/4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""ItemFour"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""541c04f3-138f-4150-b268-507a7cb52d06"",
+                    ""path"": ""<Keyboard>/5"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""ItemFive"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7c238d40-840f-4629-88bb-c5baf07931f5"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": ""Press(behavior=1)"",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""GetItem"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""686b332b-3beb-47e9-82f9-25eb8b250e29"",
+                    ""path"": ""<Keyboard>/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyBoard"",
+                    ""action"": ""UseItem"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -421,6 +554,13 @@ public class @M_Input : IInputActionCollection, IDisposable
         m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
         m_Player_Defend = m_Player.FindAction("Defend", throwIfNotFound: true);
         m_Player_IntoDoor = m_Player.FindAction("IntoDoor", throwIfNotFound: true);
+        m_Player_ItemOne = m_Player.FindAction("ItemOne", throwIfNotFound: true);
+        m_Player_ItemTwo = m_Player.FindAction("ItemTwo", throwIfNotFound: true);
+        m_Player_ItemThree = m_Player.FindAction("ItemThree", throwIfNotFound: true);
+        m_Player_ItemFour = m_Player.FindAction("ItemFour", throwIfNotFound: true);
+        m_Player_ItemFive = m_Player.FindAction("ItemFive", throwIfNotFound: true);
+        m_Player_GetItem = m_Player.FindAction("GetItem", throwIfNotFound: true);
+        m_Player_UseItem = m_Player.FindAction("UseItem", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Press = m_UI.FindAction("Press", throwIfNotFound: true);
@@ -481,6 +621,13 @@ public class @M_Input : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Attack;
     private readonly InputAction m_Player_Defend;
     private readonly InputAction m_Player_IntoDoor;
+    private readonly InputAction m_Player_ItemOne;
+    private readonly InputAction m_Player_ItemTwo;
+    private readonly InputAction m_Player_ItemThree;
+    private readonly InputAction m_Player_ItemFour;
+    private readonly InputAction m_Player_ItemFive;
+    private readonly InputAction m_Player_GetItem;
+    private readonly InputAction m_Player_UseItem;
     public struct PlayerActions
     {
         private @M_Input m_Wrapper;
@@ -490,6 +637,13 @@ public class @M_Input : IInputActionCollection, IDisposable
         public InputAction @Attack => m_Wrapper.m_Player_Attack;
         public InputAction @Defend => m_Wrapper.m_Player_Defend;
         public InputAction @IntoDoor => m_Wrapper.m_Player_IntoDoor;
+        public InputAction @ItemOne => m_Wrapper.m_Player_ItemOne;
+        public InputAction @ItemTwo => m_Wrapper.m_Player_ItemTwo;
+        public InputAction @ItemThree => m_Wrapper.m_Player_ItemThree;
+        public InputAction @ItemFour => m_Wrapper.m_Player_ItemFour;
+        public InputAction @ItemFive => m_Wrapper.m_Player_ItemFive;
+        public InputAction @GetItem => m_Wrapper.m_Player_GetItem;
+        public InputAction @UseItem => m_Wrapper.m_Player_UseItem;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -514,6 +668,27 @@ public class @M_Input : IInputActionCollection, IDisposable
                 @IntoDoor.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnIntoDoor;
                 @IntoDoor.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnIntoDoor;
                 @IntoDoor.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnIntoDoor;
+                @ItemOne.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnItemOne;
+                @ItemOne.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnItemOne;
+                @ItemOne.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnItemOne;
+                @ItemTwo.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnItemTwo;
+                @ItemTwo.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnItemTwo;
+                @ItemTwo.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnItemTwo;
+                @ItemThree.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnItemThree;
+                @ItemThree.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnItemThree;
+                @ItemThree.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnItemThree;
+                @ItemFour.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnItemFour;
+                @ItemFour.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnItemFour;
+                @ItemFour.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnItemFour;
+                @ItemFive.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnItemFive;
+                @ItemFive.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnItemFive;
+                @ItemFive.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnItemFive;
+                @GetItem.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGetItem;
+                @GetItem.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGetItem;
+                @GetItem.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnGetItem;
+                @UseItem.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnUseItem;
+                @UseItem.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnUseItem;
+                @UseItem.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnUseItem;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -533,6 +708,27 @@ public class @M_Input : IInputActionCollection, IDisposable
                 @IntoDoor.started += instance.OnIntoDoor;
                 @IntoDoor.performed += instance.OnIntoDoor;
                 @IntoDoor.canceled += instance.OnIntoDoor;
+                @ItemOne.started += instance.OnItemOne;
+                @ItemOne.performed += instance.OnItemOne;
+                @ItemOne.canceled += instance.OnItemOne;
+                @ItemTwo.started += instance.OnItemTwo;
+                @ItemTwo.performed += instance.OnItemTwo;
+                @ItemTwo.canceled += instance.OnItemTwo;
+                @ItemThree.started += instance.OnItemThree;
+                @ItemThree.performed += instance.OnItemThree;
+                @ItemThree.canceled += instance.OnItemThree;
+                @ItemFour.started += instance.OnItemFour;
+                @ItemFour.performed += instance.OnItemFour;
+                @ItemFour.canceled += instance.OnItemFour;
+                @ItemFive.started += instance.OnItemFive;
+                @ItemFive.performed += instance.OnItemFive;
+                @ItemFive.canceled += instance.OnItemFive;
+                @GetItem.started += instance.OnGetItem;
+                @GetItem.performed += instance.OnGetItem;
+                @GetItem.canceled += instance.OnGetItem;
+                @UseItem.started += instance.OnUseItem;
+                @UseItem.performed += instance.OnUseItem;
+                @UseItem.canceled += instance.OnUseItem;
             }
         }
     }
@@ -619,6 +815,13 @@ public class @M_Input : IInputActionCollection, IDisposable
         void OnAttack(InputAction.CallbackContext context);
         void OnDefend(InputAction.CallbackContext context);
         void OnIntoDoor(InputAction.CallbackContext context);
+        void OnItemOne(InputAction.CallbackContext context);
+        void OnItemTwo(InputAction.CallbackContext context);
+        void OnItemThree(InputAction.CallbackContext context);
+        void OnItemFour(InputAction.CallbackContext context);
+        void OnItemFive(InputAction.CallbackContext context);
+        void OnGetItem(InputAction.CallbackContext context);
+        void OnUseItem(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

@@ -35,6 +35,7 @@ public class RoomPlayerTransition : MonoBehaviour
 
     private void Into() 
     {
+        SceneOneMonsterSpawner.Instance.UpdateIsSpawn();
         if(next_spot == null)
         {
             UIManager.Instance.Fade(Player.Instance.pre_pos.position);

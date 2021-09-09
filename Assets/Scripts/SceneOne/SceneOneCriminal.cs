@@ -9,12 +9,16 @@ public class SceneOneCriminal : MonoBehaviour, IEnemy
     public Sprite hited_two;
     public Sprite sit;
     private SpriteRenderer sprite_renderer;
+    private Rigidbody2D rigidbody2D;
+
     private bool dispear;
 
     private void Start()
     {
+        rigidbody2D = GetComponent<Rigidbody2D>();
         sprite_renderer = GetComponent<SpriteRenderer>();
         sprite_renderer.sprite = idle;
+        rigidbody2D.bodyType = RigidbodyType2D.Kinematic;
     }
 
     private void Update() 
@@ -34,6 +38,8 @@ public class SceneOneCriminal : MonoBehaviour, IEnemy
     public void TakeDamage(int d) 
     {
         gameObject.layer = 11; // un_attackable layer
+        rigidbody2D.bodyType = RigidbodyType2D.Dynamic;
+        transform.rotation = Quaternion.identity;
         StartCoroutine(PlaySprite());
     }
 

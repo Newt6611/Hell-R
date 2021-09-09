@@ -44,6 +44,62 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "ItemOne",
+                    "type": "Button",
+                    "id": "b3b1cc22-29d7-44a8-b42f-58b77b141270",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "ItemTwo",
+                    "type": "Button",
+                    "id": "b06efda3-65b8-438a-8fe0-73487e70d867",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "ItemThree",
+                    "type": "Button",
+                    "id": "38e09b1d-05d0-4ed9-ae2e-31ca0895a2dc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "ItemFour",
+                    "type": "Button",
+                    "id": "9ea5600a-9073-4906-870d-7c43fbd382d3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "ItemFive",
+                    "type": "Button",
+                    "id": "06ef9f39-5c50-4f65-9280-f0584939fe65",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "GetItem",
+                    "type": "Button",
+                    "id": "9ad52125-ad9c-4a90-9924-3f75a2970ca0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "UseItem",
+                    "type": "Button",
+                    "id": "cf740c6d-ec08-4516-903b-e6da57834822",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -231,6 +287,83 @@
                     "processors": "",
                     "groups": "KeyBoard",
                     "action": "IntoDoor",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4cb00dea-247d-4c67-8c95-e526c0b18a53",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyBoard",
+                    "action": "ItemOne",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b8df3a10-3003-470c-bcb9-e04acd21441e",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyBoard",
+                    "action": "ItemTwo",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c095bb86-afdf-4b4f-aeab-71682d980fd0",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyBoard",
+                    "action": "ItemThree",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "65d07f77-c77f-4345-becf-a4278cf8b67b",
+                    "path": "<Keyboard>/4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyBoard",
+                    "action": "ItemFour",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "541c04f3-138f-4150-b268-507a7cb52d06",
+                    "path": "<Keyboard>/5",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyBoard",
+                    "action": "ItemFive",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7c238d40-840f-4629-88bb-c5baf07931f5",
+                    "path": "<Keyboard>/f",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "KeyBoard",
+                    "action": "GetItem",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "686b332b-3beb-47e9-82f9-25eb8b250e29",
+                    "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyBoard",
+                    "action": "UseItem",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

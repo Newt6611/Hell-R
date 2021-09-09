@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class SceneOneMonsterSpawner : MonoBehaviour
 {
+    public static SceneOneMonsterSpawner Instance { get { return m_instance; } }
+    private static SceneOneMonsterSpawner m_instance;
+    
+
     private bool spawn = true;
     [SerializeField] private GameObject dog_pre;
     [SerializeField] private GameObject cat_pre;
@@ -17,6 +21,14 @@ public class SceneOneMonsterSpawner : MonoBehaviour
 
     private float time_to_spawn_btw;
 
+    private void Awake() 
+    {
+        if(m_instance != null && m_instance != this)
+            Destroy(this);
+        else
+            m_instance = this;
+    }
+
     public void Start() 
     {
         SceneOneManager.Instance.on_dark_mode += OnDarkMode;
@@ -27,6 +39,7 @@ public class SceneOneMonsterSpawner : MonoBehaviour
 
     private void Update() 
     {
+        Debug.Log(spawn);
         transform.position = Player.Instance.transform.position;
         if(!spawn)
             return;
@@ -95,11 +108,5 @@ public class SceneOneMonsterSpawner : MonoBehaviour
     public void UpdateIsSpawn()
     {
         spawn = !spawn;
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.tag == "spawn")
-            spawn = !spawn;
     }
 }

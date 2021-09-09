@@ -78,6 +78,7 @@ public class Player : MonoBehaviour
     
 
     public event Action player_into_door_use_keyboard;
+    public event Action player_pick_item;
 
 
     private void Awake() 
@@ -100,6 +101,7 @@ public class Player : MonoBehaviour
         input_reader.defendEvent += DefendAction;
         input_reader.defendKeyUpEvent += DefendKeyUp;
         input_reader.intoDoorEvent += IntoDoorAction;
+        input_reader.getItemEvent += PickItem;
     }
 
     private void OnDisable()
@@ -110,6 +112,7 @@ public class Player : MonoBehaviour
         input_reader.defendEvent -= DefendAction;
         input_reader.defendKeyUpEvent -= DefendKeyUp;
         input_reader.intoDoorEvent -= IntoDoorAction;
+        input_reader.getItemEvent -= PickItem;
     }
 
     private void Start() 
@@ -205,6 +208,11 @@ public class Player : MonoBehaviour
     private void IntoDoorAction()
     {
         player_into_door_use_keyboard?.Invoke();
+    }
+
+    private void PickItem() 
+    {
+        player_pick_item?.Invoke();
     }
 
     ///////////////////////////////////////
