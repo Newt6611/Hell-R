@@ -19,7 +19,7 @@ public class SceneOneBossWalk : ISceneOneBoss
     {
         if(Mathf.Abs(boss.base_pos.x - boss.transform.position.x) > 0.01f)
         {
-            Debug.Log("walk bbbbbbbbbbbbbbbbbback");
+            //Debug.Log("walk bbbbbbbbbbbbbbbbbback");
             boss.PlayAnimation("walkback");
             target_pos = boss.base_pos;
         }

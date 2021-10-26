@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class SceneOneBoss : MonoBehaviour, IEnemy
 {
     [SerializeField] private bool draw_gizmos;
+
+    public GameObject door;
 
     public LayerMask PlayerLayer { get { return player_layer; } }
     public float FireBallRadius { get { return fireball_radius; } }
@@ -50,12 +53,13 @@ public class SceneOneBoss : MonoBehaviour, IEnemy
         
         states = new Dictionary<string, ISceneOneBoss>()
         {
-            { "idle", new SceneOneBossIdle(this, "idle") },
+            { "idle",     new SceneOneBossIdle(this, "idle") },
             { "fireball", new SceneOneBossFireBall(this, "fireball") },
-            { "swing", new SceneOneBossSwing(this, "swing") },
-            { "crack", new SceneOneBossCrack(this, "crack") },
-            { "roar", new SceneOneBossRoar(this, "roar") },
-            { "walk", new SceneOneBossWalk(this, "walk") }
+            { "swing",    new SceneOneBossSwing(this, "swing") },
+            { "crack",    new SceneOneBossCrack(this, "crack") },
+            { "roar",     new SceneOneBossRoar(this, "roar") },
+            { "walk",     new SceneOneBossWalk(this, "walk") },
+            { "died",     new SceneOneBossDied(this, "died") }
         };
 
         current_state = states["idle"];
@@ -67,14 +71,22 @@ public class SceneOneBoss : MonoBehaviour, IEnemy
     private void Update()
     {
         current_state.OnUpdate();
-        Debug.Log(current_state.GetName());
+        //Debug.Log(current_state.GetName());
+
+        if(Keyboard.current.kKey.IsPressed())
+        {
+            TakeDamage(100);
+        }
     }
 
     public void TakeDamage(int d)
     {
         health -= d;
         if(health <= 0)
+        {
             Debug.Log("Scene One Boss Dead !");
+            UpdateState("died");
+        }
         UIManager.Instance.scene_one_boss_healthBar.fillAmount = (float)health / (float)full_health;
     }
 
@@ -83,6 +95,7 @@ public class SceneOneBoss : MonoBehaviour, IEnemy
         current_state.OnExit();
         current_state = states[name];
         current_state.OnEnter();
+
     }
 
     public void PlayAnimation(string name)
@@ -95,6 +108,11 @@ public class SceneOneBoss : MonoBehaviour, IEnemy
         if(t < 1)
             rest_time = 1;
         rest_time = t;
+    }
+
+    public void DestroySelf()
+    {
+        Destroy(this.gameObject);
     }
 
     private void OnDrawGizmos()

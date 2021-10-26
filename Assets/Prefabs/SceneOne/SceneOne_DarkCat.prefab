@@ -498,16 +498,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e3254731676c604fb0434d5990da720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health_bar_obj: {fileID: 252225685649969212}
-  health_bar: {fileID: 252225686092285340}
   DrawGizmos: 1
   find_player_radius: 8.67
   attack_radius: 3.27
   attack_pos: {fileID: 252225684928117989}
   attack_pos_radius: 0.9
   speed: 2.5
-  total_health: 3
+  total_health: 2
   light: {fileID: 1838056655}
+  purple_particle_pre: {fileID: 7082641250889631538, guid: 8ae09a022e2d84b4da0e5d8d1f1e208b, type: 3}
 --- !u!1 &252225686086365690
 GameObject:
   m_ObjectHideFlags: 0

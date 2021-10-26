@@ -195,6 +195,7 @@ MonoBehaviour:
   hited_one: {fileID: -8241017492943149861, guid: 2162055e920ddfb408ffb32068aeed02, type: 3}
   hited_two: {fileID: -5145510352690209775, guid: 2162055e920ddfb408ffb32068aeed02, type: 3}
   sit: {fileID: 5352158277852810618, guid: 2162055e920ddfb408ffb32068aeed02, type: 3}
+  purple_particle_pre: {fileID: 7082641250889631538, guid: 8ae09a022e2d84b4da0e5d8d1f1e208b, type: 3}
 --- !u!70 &6275486908138333481
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

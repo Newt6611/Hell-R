@@ -63,4 +63,6 @@ public class SceneOneBossAniHelper : MonoBehaviour
         if(this.gameObject != null)
             Destroy(this.gameObject);
     }
+
+    
 }

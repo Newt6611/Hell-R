@@ -15,6 +15,7 @@ public class AttackState : IPlayerState
 
     public void OnStateEnter() 
     {
+        player.audio_source.PlayOneShot(player.attack, 0.5f);
 
         if(Physics2D.OverlapCircle(player.jump_dectector.position, player.jump_dectector_radius, player.ground_layer))
             player.ani.Play("attack");

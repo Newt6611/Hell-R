@@ -658,4 +658,5 @@ MonoBehaviour:
   speed: 2.5
   total_health: 3
   light: {fileID: 555816843}
+  purple_particle_pre: {fileID: 7082641250889631538, guid: 8ae09a022e2d84b4da0e5d8d1f1e208b, type: 3}
   is_dark: 0

@@ -4,10 +4,17 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 
+public enum SceneName 
+{
+    SceneOne, SceneOneBoss
+}
+
 public class GameManager : MonoBehaviour
 {
     private static GameManager m_instance;
     public static GameManager Instance { get { return m_instance; } }
+
+    public SceneName CurrentScene = SceneName.SceneOne;
 
     private PlayerInput player_input;
     [SerializeField] InputReader input_reader;

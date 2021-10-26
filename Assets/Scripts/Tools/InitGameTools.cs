@@ -18,6 +18,16 @@ public class InitGameTools : MonoBehaviour
         {
             Scene scene = SceneManager.GetSceneAt(i);
 
+            /*switch(scene.name)
+            {
+                case "SceneOne":
+                    GameManager.Instance.CurrentScene = SceneName.SceneOne;
+                    break;
+                case "SceneOneBoss":
+                    GameManager.Instance.CurrentScene = SceneName.SceneOneBoss;
+                    break;
+            }*/
+
             if(scene.name == game_tool_scene_name && !has_tool)
                 has_tool = true;
             if(scene.name == audio_scene_name && !has_audio)

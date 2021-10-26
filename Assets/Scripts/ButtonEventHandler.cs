@@ -12,7 +12,7 @@ public class ButtonEventHandler : MonoBehaviour, ISelectHandler, IDeselectHandle
 
     public void OnSelect(BaseEventData eventData)
     {
-        AudioManager.Instance.PlayOnShot(clip);
+        AudioManager.Instance.PlayOneShot(clip);
         selected_image.enabled = true;
     }
 

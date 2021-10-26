@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [CreateAssetMenu(fileName="InputReader", menuName="Input/Input Reader")]
-public class InputReader : ScriptableObject, M_Input.IPlayerActions
+public class InputReader : ScriptableObject, M_Input.IPlayerActions, M_Input.IUIActions
 {
     // Player
     public event Action<Vector2> movementEvent;
@@ -22,6 +22,14 @@ public class InputReader : ScriptableObject, M_Input.IPlayerActions
     public event Action itemFourEvent;
     public event Action itemFiveEvent;
 
+    // ui
+    public event Action ui_OnPressed;
+    public event Action ui_OnHighlight;
+    public event Action ui_OnSubmit;
+    public event Action ui_OnRight;
+    public event Action ui_OnLeft;
+    public event Action ui_OnExit;
+
     public event Action controlChangeEvent;
 
     private M_Input input;
@@ -32,6 +40,7 @@ public class InputReader : ScriptableObject, M_Input.IPlayerActions
         {
             input = new M_Input();
             input.Player.SetCallbacks(this);
+            input.UI.SetCallbacks(this);
         }
 
         EnablePlayer();
@@ -41,12 +50,14 @@ public class InputReader : ScriptableObject, M_Input.IPlayerActions
 
     public void EnablePlayer()
     {
+        input.UI.Disable();
         input.Player.Enable();
     }
 
     public void DisablePlayer()
     {
         input.Player.Disable();
+        input.UI.Enable();
     }
 
 
@@ -124,13 +135,53 @@ public class InputReader : ScriptableObject, M_Input.IPlayerActions
 
     public void OnGetItem(InputAction.CallbackContext context)
     {
-        if(context.started)
+        if(context.performed)
             getItemEvent?.Invoke();
     }
 
     public void OnUseItem(InputAction.CallbackContext context)
     {
-        if(context.started)
+        if(context.performed)
             useItemEvent?.Invoke();
     }
+
+    /////////////////////////////////////////////////////////////////
+    // UI
+    /////////////////////////////////////////////////////////////////
+    public void OnPress(InputAction.CallbackContext context)
+    {
+        if(context.performed)
+            ui_OnPressed?.Invoke();
+    }
+
+    public void OnHighLight(InputAction.CallbackContext context)
+    {
+        if(context.performed)
+            ui_OnHighlight?.Invoke();
+    }
+
+    public void OnSubmit(InputAction.CallbackContext context)
+    {
+        if(context.performed)
+            ui_OnSubmit?.Invoke();
+    }
+
+    public void OnRight(InputAction.CallbackContext context)
+    {
+        if(context.performed)
+            ui_OnRight?.Invoke();
+    }
+
+    public void OnLeft(InputAction.CallbackContext context) 
+    {
+        if(context.performed)
+            ui_OnLeft?.Invoke();
+    }
+
+    public void OnExit(InputAction.CallbackContext context)
+    {
+        if(context.performed)
+            ui_OnExit?.Invoke();
+    }
+
 }

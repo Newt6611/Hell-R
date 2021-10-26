@@ -6,9 +6,24 @@ public class SceneOneTrapObj : MonoBehaviour
 {
     public float speed = 20; 
     
+    public bool right = true;
+
+    private void Start()
+    {
+        Invoke("DestroyObj", 7);
+    }
+
+    private void DestroyObj()
+    {
+        Destroy(gameObject);
+    }
+
     private void Update()
     {
-        transform.position = new Vector3(transform.position.x + 20 * Time.deltaTime, transform.position.y, transform.position.z);
+        if(right)
+            transform.position = new Vector3(transform.position.x + 20 * Time.deltaTime, transform.position.y, transform.position.z);
+        else
+            transform.position = new Vector3(transform.position.x - 20 * Time.deltaTime, transform.position.y, transform.position.z);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

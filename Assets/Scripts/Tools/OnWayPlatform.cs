@@ -10,12 +10,5 @@ public class OnWayPlatform : MonoBehaviour
     {
         if(other.CompareTag("Player"))
             transform.parent.GetComponent<Collider2D>().enabled = is_up;
-
-        /*
-        if(other.CompareTag("Player") && !is_up)
-            transform.parent.GetComponent<SpriteRenderer>().sortingOrder = 9;
-        if(other.CompareTag("Player") && is_up)
-            transform.parent.GetComponent<SpriteRenderer>().sortingOrder = 20;
-        */
     }
 }

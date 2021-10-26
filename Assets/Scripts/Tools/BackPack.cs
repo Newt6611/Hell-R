@@ -30,6 +30,16 @@ public class BackPack : MonoBehaviour
         input_reader.useItemEvent += UseItem;
     }
 
+    private void OnDisable()
+    {
+        input_reader.itemOneEvent -= OnItemOneSelected;
+        input_reader.itemTwoEvent -= OnItemTwoSelected;
+        input_reader.itemThreeEvent -= OnItemThreeSelected;
+        input_reader.itemFourEvent -= OnItemFourSelected;
+        input_reader.itemFiveEvent -= OnItemFiveSelected;
+        input_reader.useItemEvent -= UseItem;
+    }
+
     private void Start()
     {
         items[bar_index].Select();

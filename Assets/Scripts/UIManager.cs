@@ -24,6 +24,7 @@ public class UIManager : MonoBehaviour
 
     public GameObject scene_one_boss_stuff;
     public Image scene_one_boss_healthBar;
+    //public GameObject scene_one_music_note;
 
     public InputReader input_reader;
 
@@ -32,6 +33,15 @@ public class UIManager : MonoBehaviour
 
     // For Player Transition In Same Scene
     private Vector2 next_spot;
+
+    [Header("Music Notes")]
+    public Image music_room_note;
+    [SerializeField] private Sprite image_g;
+    [SerializeField] private Sprite image_a;
+    [SerializeField] private Sprite image_b;
+    [SerializeField] private Sprite image_c;
+    [SerializeField] private Sprite image_f;
+
 
     private void Awake() 
     {
@@ -48,12 +58,12 @@ public class UIManager : MonoBehaviour
         UpdatePlayerHealthBar();
     }
 
+    string geoblock = "80000016";
+
     private void Update()
     {
         if(staminaBar.fillAmount < 1)
             staminaBar.fillAmount += 0.0005f;
-    
-
 
         // For Player's "BACK" Health Bar
         if(healthBarBack.fillAmount > healthBar.fillAmount)
@@ -87,6 +97,12 @@ public class UIManager : MonoBehaviour
     }
 
 
+    // animation call back
+    private void BackToIdle()
+    {
+        ani.Play("idle");
+    }
+
     // SceneOne 
     public void UpdateHateValue()
     {
@@ -114,5 +130,28 @@ public class UIManager : MonoBehaviour
     {
         shaking = false;
         input_reader.EnablePlayer();
+    }
+
+    public void SetMusicRoomNoteAnimation(MusicNotes note) 
+    {
+        switch(note) 
+        {
+            // G A B C F
+            case MusicNotes.note_one:
+                music_room_note.sprite = image_g;
+                break;
+            case MusicNotes.note_two:
+                music_room_note.sprite = image_a;
+                break;
+            case MusicNotes.note_three:
+                music_room_note.sprite = image_b;
+                break;
+            case MusicNotes.note_four:
+                music_room_note.sprite = image_c;
+                break;
+            case MusicNotes.note_five:
+                music_room_note.sprite = image_f;
+                break;
+        }
     }
 }

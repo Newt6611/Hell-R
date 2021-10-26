@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
 using UnityEngine.Experimental.Rendering.Universal;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -81,6 +82,14 @@ public class Player : MonoBehaviour
     public event Action player_pick_item;
 
 
+    [Header("Sound Clips")]
+    [HideInInspector] public AudioSource audio_source;
+    public AudioClip walk;
+    public AudioClip[] hit;
+    public AudioClip attack;
+    public AudioClip jump;
+    
+
     private void Awake() 
     {
         input_reader.Enable();
@@ -95,6 +104,16 @@ public class Player : MonoBehaviour
 
     private void OnEnable()
     {
+        Enable();   
+    }
+
+    private void OnDisable()
+    {
+        Disable();
+    }
+
+    public void Enable() 
+    {
         input_reader.movementEvent += PlayerMoveAction;
         input_reader.jumpEvent += JumpAction;
         input_reader.attackEvent += AttackAction;
@@ -104,7 +123,7 @@ public class Player : MonoBehaviour
         input_reader.getItemEvent += PickItem;
     }
 
-    private void OnDisable()
+    public void Disable() 
     {
         input_reader.movementEvent -= PlayerMoveAction;
         input_reader.jumpEvent -= JumpAction;
@@ -117,14 +136,16 @@ public class Player : MonoBehaviour
 
     private void Start() 
     {
-        SceneOneManager.Instance.on_normal_mode += OnNormalMode;
-        SceneOneManager.Instance.on_dark_mode += OnDarkMode;
+        SetUpSceneData();
+        //SceneOneManager.Instance.on_normal_mode += OnNormalMode;
+        //SceneOneManager.Instance.on_dark_mode += OnDarkMode;
         light = GetComponentInChildren<Light2D>();
         rb = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
         sprite_renderer = GetComponent<SpriteRenderer>();
         game_feel = GetComponent<GameFeel>();
-        
+        audio_source = GetComponent<AudioSource>();
+
         state_cache = new Dictionary<string, IPlayerState>()
         {
             { "idle", new IdleState("idle", this) },
@@ -139,6 +160,8 @@ public class Player : MonoBehaviour
         current_state = state_cache["idle"];
         current_state.OnStateEnter();
     }
+
+    
 
     private void Update()
     {
@@ -217,7 +240,6 @@ public class Player : MonoBehaviour
 
     ///////////////////////////////////////
     
-
     public void TakeDamage(Transform target, int d)
     {
         current_health -= d;
@@ -298,7 +320,8 @@ public class Player : MonoBehaviour
         {
             game_feel.StopScreen(0.1f);
             game_feel.ShakeCamera(5, 0.2f);
-            e.GetComponent<IEnemy>().TakeDamage(1); 
+            e.GetComponent<IEnemy>().TakeDamage(1);
+            AudioManager.Instance.PlayOneShot(hit[UnityEngine.Random.Range(0, hit.Length)], 0.5f);
         }
     }
     
@@ -309,7 +332,16 @@ public class Player : MonoBehaviour
         else if(movement.x != 0)
             UpdateState("run");
     }
+
     ////////////////////////////////////////////////
+    private void SetUpSceneData()
+    {
+        if(GameManager.Instance.CurrentScene == SceneName.SceneOne)
+        {
+            SceneOneManager.Instance.on_normal_mode += OnNormalMode;
+            SceneOneManager.Instance.on_dark_mode += OnDarkMode;
+        }
+    }
 
     // scene one
     private void OnNormalMode()

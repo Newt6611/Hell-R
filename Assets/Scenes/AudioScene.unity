@@ -263,3 +263,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88ae281397747a542a70c9954bd6eaa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  F: {fileID: 8300000, guid: e617c6972de01f446a01881c44e6db2c, type: 3}
+  G: {fileID: 8300000, guid: ffc0544d93412de4da64671227e0c2db, type: 3}
+  A: {fileID: 8300000, guid: 82af667c47cb4644d867e7c990fc9dcf, type: 3}
+  B: {fileID: 8300000, guid: 397f3183f7203634896098f6655b3e5a, type: 3}
+  C: {fileID: 8300000, guid: a90e1bce54db77c47989c7eecb892168, type: 3}
+  open_door: {fileID: 8300000, guid: 8a1da2cf565009d489cf3448d946a036, type: 3}

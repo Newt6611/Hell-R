@@ -21,6 +21,7 @@ public class JumpState : IPlayerState
 
     public void OnStateEnter() 
     {
+        player.audio_source.PlayOneShot(player.jump, 0.75f);
         player.ani.Play("jump_up");
         player.rb.AddForce(Vector2.up * player.Jump_Force, ForceMode2D.Impulse);
         

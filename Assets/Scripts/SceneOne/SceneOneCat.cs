@@ -11,8 +11,8 @@ enum Cat_State
 
 public class SceneOneCat : MonoBehaviour, IEnemy
 {
-    [SerializeField] Canvas health_bar_obj;
-    [SerializeField] private Image health_bar;
+    //[SerializeField] Canvas health_bar_obj;
+    //[SerializeField] private Image health_bar;
     [SerializeField] bool DrawGizmos;
     [SerializeField] private float find_player_radius;
     [SerializeField] private float attack_radius;
@@ -31,6 +31,9 @@ public class SceneOneCat : MonoBehaviour, IEnemy
 
     [SerializeField] private Light2D light;
 
+    [SerializeField] private GameObject purple_particle_pre;
+    private GameObject purplr_particle = null;
+
     // Components
     private Rigidbody2D rb;
     private Animator ani;
@@ -38,6 +41,7 @@ public class SceneOneCat : MonoBehaviour, IEnemy
     private TrailRenderer trail_renderer;
 
     private SceneOneMonsterSpawner spawner;
+    private bool particl_start_moving = false;
     private bool is_dark;
 
     private void Start()
@@ -56,6 +60,16 @@ public class SceneOneCat : MonoBehaviour, IEnemy
     {
         // if not idle state then do flip behavior;
         FlipBehavior();
+
+        if(particl_start_moving && purplr_particle != null)
+        {
+            purplr_particle.transform.position = Vector2.MoveTowards(purplr_particle.transform.position, SceneOneManager.Instance.HateValuePos.position, 15 * Time.deltaTime);
+            if(Vector2.Distance(purplr_particle.transform.position, SceneOneManager.Instance.HateValuePos.position) < 0.2f)
+            {
+                SceneOneManager.Instance.Current_Hate_Value -= 10f;
+                Destroy(purplr_particle);
+            }
+        }
     }
 
     private IEnumerator Delay()
@@ -103,14 +117,14 @@ public class SceneOneCat : MonoBehaviour, IEnemy
     private void OnDisable()
     {
         sprite_renderer.enabled = false;
-        health_bar_obj.gameObject.SetActive(false);
+        //health_bar_obj.gameObject.SetActive(false);
         current_state = Cat_State.none;
     }
 
     private void Spawn() 
     {
         trail_renderer.enabled = false;
-        health_bar_obj.gameObject.SetActive(true);
+        //health_bar_obj.gameObject.SetActive(true);
         
         sprite_renderer.enabled = true;
         current_state = Cat_State.idle;
@@ -225,13 +239,18 @@ public class SceneOneCat : MonoBehaviour, IEnemy
         Invoke("ResetMaterial", 0.1f);
 
         current_health -= d;
-        health_bar.fillAmount = (float)current_health / (float)total_health;
+        //health_bar.fillAmount = (float)current_health / (float)total_health;
         if(current_health <= 0)
         {
-            health_bar_obj.gameObject.SetActive(false);
+            //health_bar_obj.gameObject.SetActive(false);
             gameObject.layer = 11; // un_attackable layer
             ani.Play("died");
             ChangeState(Cat_State.died);
+
+            // Show Purple Particle
+            particl_start_moving = true;
+            purplr_particle = Instantiate(purple_particle_pre, transform.position, Quaternion.identity);
+
             if(is_dark)
                 SceneOneManager.Instance.RemoveDarkObj(gameObject);
             else
@@ -254,11 +273,11 @@ public class SceneOneCat : MonoBehaviour, IEnemy
             return;
         float dir = Player.Instance.transform.position.x - transform.position.x;
         if(dir >= 0 && !face_right) {
-            health_bar.fillOrigin = 0;
+            //health_bar.fillOrigin = 0;
             Flip();
         }
         else if(dir < 0 && face_right) {
-            health_bar.fillOrigin = 1;
+            //health_bar.fillOrigin = 1;
             Flip();
         }
     }

@@ -16,6 +16,9 @@ public class RunState : IPlayerState
     public void OnStateEnter() 
     { 
         player.ani.Play("run");
+        player.audio_source.clip = player.walk;
+        player.audio_source.volume = 0.1f;
+        player.audio_source.Play();
     }
 
     public void OnUpdate() 
@@ -34,7 +37,11 @@ public class RunState : IPlayerState
 
     }
 
-    public void OnStateExit() { }
+    public void OnStateExit() 
+    {
+        player.audio_source.Stop();
+        player.audio_source.volume = 1f;
+    }
 
     public string GetStateName() => this.state_name;
 }

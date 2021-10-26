@@ -8,6 +8,7 @@ public class FloatingTexture : MonoBehaviour
     public Sprite sprite;
 
     public float speed = 0.5f;
+    public float height = 1;
 
     private SpriteRenderer renderer;
     
@@ -16,7 +17,7 @@ public class FloatingTexture : MonoBehaviour
         renderer = GetComponent<SpriteRenderer>();
         if(sprite != null)
             renderer.sprite = sprite;
-        transform.DOMoveY(transform.position.y + 1, speed).SetLoops(-1, LoopType.Yoyo);
+        transform.DOMoveY(transform.position.y + height, speed).SetLoops(-1, LoopType.Yoyo);
     }
 
     private void OnEnable()
