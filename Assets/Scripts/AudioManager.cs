@@ -68,6 +68,7 @@ public class AudioManager : MonoBehaviour
 
     public void Play(AudioClip clip)
     {
+        audio_source.volume = 1;
         audio_source.clip = clip;
         audio_source.Play();
     }

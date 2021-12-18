@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
 
     public SceneName CurrentScene = SceneName.SceneOne;
 
+    public string currentController;
+
     private PlayerInput player_input;
     [SerializeField] InputReader input_reader;
 
@@ -28,7 +30,7 @@ public class GameManager : MonoBehaviour
         
         player_input = GetComponent<PlayerInput>();
         player_input.onControlsChanged += OnControlsChanged;
-        Debug.Log("current input device : " + player_input.currentControlScheme);
+        currentController = player_input.currentControlScheme;
     }
 
     private void Update() 
@@ -38,6 +40,6 @@ public class GameManager : MonoBehaviour
     public void OnControlsChanged(PlayerInput input)
     {
         Debug.Log("current input device : " + player_input.currentControlScheme);
-        input_reader.OnControllerChange();
+        input_reader.OnControllerChange(player_input.currentControlScheme);
     }
 }

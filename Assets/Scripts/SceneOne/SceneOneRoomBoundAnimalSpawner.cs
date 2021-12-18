@@ -13,16 +13,19 @@ public class SceneOneRoomBoundAnimalSpawner : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            
-            if((other.transform.position.x - trigger_pos.position.x) <= 0 && !HasAnimal())
+            if((other.transform.position.x - trigger_pos.position.x) <= 0)
             {
-                int index = Random.Range(0, 2);
-                has_animal = Instantiate(animals[index], spawn_pos.position, animals[index].transform.rotation).GetComponent<SceneOneCriminal>();
-                has_animal.SetParent(this);
+                if(has_animal == null)
+                {
+                    int index = Random.Range(0, 2);
+                    has_animal = Instantiate(animals[index], spawn_pos.position, animals[index].transform.rotation).GetComponent<SceneOneCriminal>();
+                    has_animal.SetParent(this);
+                }
             }
-            else if((other.transform.position.x - trigger_pos.position.x) > 0 && HasAnimal())
+            else if((other.transform.position.x - trigger_pos.position.x) > 0)
             {
-                Invoke("D", 0.3f);
+                if(has_animal)
+                    Invoke("D", 0.3f);
             }
         }
     }
@@ -34,6 +37,7 @@ public class SceneOneRoomBoundAnimalSpawner : MonoBehaviour
 
     private void D() 
     {
-        Destroy(has_animal);
+        Destroy(has_animal.gameObject);
+        has_animal = null;
     }
 }

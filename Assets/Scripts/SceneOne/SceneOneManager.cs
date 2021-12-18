@@ -77,6 +77,12 @@ public class SceneOneManager : MonoBehaviour
     public GameObject note_five;
     public int music_notes;
 
+    // background music
+    [Header("background music")]
+    public AudioClip background_one;
+    public AudioClip background_two;
+    private float play_music_time;
+
     public BoxCollider2D to_boss_collider;
 
     public void Awake()
@@ -94,7 +100,7 @@ public class SceneOneManager : MonoBehaviour
     {
         mode = SceneOneMode.normal;
 
-        Total_Hate_Value = 100;
+        Total_Hate_Value = 500;
         Current_Hate_Value = 0;
 
         volume.profile.TryGet(out bloom);
@@ -107,6 +113,7 @@ public class SceneOneManager : MonoBehaviour
             ToDark();
 
         SetAllNoteDispear();
+        play_music_time = 1;
     }
 
     public void RegisterNormalObj(GameObject obj) => normal_obj.Add(obj);
@@ -119,27 +126,28 @@ public class SceneOneManager : MonoBehaviour
 
     private void Update() 
     {
+
         /// Controlling HateValue With SceneMode
         if(mode == SceneOneMode.normal)
         {
-            if(Current_Hate_Value < 100)
+            if(Current_Hate_Value < Total_Hate_Value)
             {
                 Current_Hate_Value += 3 * Time.deltaTime;
                 UIManager.Instance.UpdateHateValue();
             }
-            else if(Current_Hate_Value >= 100)
+            else if(Current_Hate_Value >= Total_Hate_Value)
             {
                 UIManager.Instance.animator.Play("fade5s");
             }
         }
         else if(mode == SceneOneMode.dark)
         {
-            if(Current_Hate_Value > 10)
+            if(Current_Hate_Value > 50)
             {
                 Current_Hate_Value -= 3 * Time.deltaTime;
                 UIManager.Instance.UpdateHateValue();
             }
-            else if(Current_Hate_Value <= 10)
+            else if(Current_Hate_Value <= 50)
             {
                 UIManager.Instance.animator.Play("fade5s");
             }
@@ -259,6 +267,8 @@ public class SceneOneManager : MonoBehaviour
 
     private void ToDark()
     {
+        AudioManager.Instance.Play(background_one);
+
         mode = SceneOneMode.dark;
         on_dark_mode?.Invoke();
 

@@ -30,7 +30,7 @@ public class InputReader : ScriptableObject, M_Input.IPlayerActions, M_Input.IUI
     public event Action ui_OnLeft;
     public event Action ui_OnExit;
 
-    public event Action controlChangeEvent;
+    public event Action<string> controlChangeEvent;
 
     private M_Input input;
 
@@ -62,9 +62,9 @@ public class InputReader : ScriptableObject, M_Input.IPlayerActions, M_Input.IUI
 
 
 
-    public void OnControllerChange()
+    public void OnControllerChange(string scheme)
     {
-        controlChangeEvent?.Invoke();
+        controlChangeEvent?.Invoke(scheme);
     }
 
 

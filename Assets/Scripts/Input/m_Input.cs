@@ -305,6 +305,17 @@ public class @M_Input : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""d38e2784-d994-49bb-84f3-b1213635eb06"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""GamePad"",
+                    ""action"": ""IntoDoor"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""4cb00dea-247d-4c67-8c95-e526c0b18a53"",
                     ""path"": ""<Keyboard>/1"",
                     ""interactions"": """",

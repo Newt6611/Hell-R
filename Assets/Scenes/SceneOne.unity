@@ -142,6 +142,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -211,6 +227,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -280,6 +312,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -686,6 +734,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1055,7 +1119,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38cd3f0894214c042a62f67b95ce9942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  inputReader: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+  keyboardSprite: {fileID: 0}
+  controllerSprite: {fileID: 0}
   speed: 1
   height: 0.5
 --- !u!1 &69040113
@@ -1292,6 +1358,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4023,6 +4105,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4179,6 +4277,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4395,6 +4509,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4653,6 +4783,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4993,6 +5139,8 @@ MonoBehaviour:
   note_four: {fileID: 1689225783}
   note_five: {fileID: 56626469}
   music_notes: 0
+  background_one: {fileID: 8300000, guid: 7f34fe4c671ece04bb49a0602396e695, type: 3}
+  background_two: {fileID: 8300000, guid: 855d9f77ef1282047a02b9d135bb6242, type: 3}
   to_boss_collider: {fileID: 640475304}
 --- !u!1001 &493730179
 PrefabInstance:
@@ -5013,6 +5161,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5087,6 +5251,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5338,7 +5518,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 92.163246, y: 0.09708977, z: -10}
+  m_LocalPosition: {x: -21.598282, y: 0.33947554, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1073420033}
@@ -5816,6 +5996,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -6323,6 +6519,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -6474,6 +6686,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -6713,7 +6941,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -1.1658249, y: 3.070181}
@@ -7150,6 +7378,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7445,6 +7689,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7514,6 +7774,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7593,6 +7869,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7807,6 +8099,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -8359,6 +8667,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -8768,7 +9092,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38cd3f0894214c042a62f67b95ce9942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  inputReader: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+  keyboardSprite: {fileID: 0}
+  controllerSprite: {fileID: 0}
   speed: 0.5
   height: 1
 --- !u!114 &851703435
@@ -8833,6 +9159,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -9252,6 +9594,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -9475,6 +9833,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -9544,6 +9918,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -9831,6 +10221,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -10176,6 +10582,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -10245,6 +10667,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -10319,6 +10757,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -10600,7 +11054,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38cd3f0894214c042a62f67b95ce9942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  inputReader: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+  keyboardSprite: {fileID: 0}
+  controllerSprite: {fileID: 0}
   speed: 1
   height: 0.5
 --- !u!1 &1031290117
@@ -11395,6 +11851,18 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -11943,6 +12411,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -12126,6 +12610,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -12983,6 +13483,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -13052,6 +13568,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -13607,6 +14139,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -13897,6 +14445,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -14043,6 +14607,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -14526,6 +15106,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -15788,6 +16384,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -16234,6 +16846,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -16585,6 +17213,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -16654,6 +17298,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -16711,13 +17371,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5861185101778020297, guid: 3df519f21178efe4d92db4ea4d318da0, type: 3}
+      propertyPath: TotalHealth
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 5861185101778020300, guid: 3df519f21178efe4d92db4ea4d318da0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 120.2
+      value: -21.6
       objectReference: {fileID: 0}
     - target: {fileID: 5861185101778020300, guid: 3df519f21178efe4d92db4ea4d318da0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -20.2
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 5861185101778020300, guid: 3df519f21178efe4d92db4ea4d318da0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17034,7 +17698,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38cd3f0894214c042a62f67b95ce9942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  inputReader: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+  keyboardSprite: {fileID: 0}
+  controllerSprite: {fileID: 0}
   speed: 1
   height: 0.5
 --- !u!1 &1653426926
@@ -17441,7 +18107,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38cd3f0894214c042a62f67b95ce9942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  inputReader: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+  keyboardSprite: {fileID: 0}
+  controllerSprite: {fileID: 0}
   speed: 1
   height: 0.5
 --- !u!1 &1699238252
@@ -17844,6 +18512,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -18258,6 +18942,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -18327,6 +19027,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -18552,6 +19268,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -19339,7 +20071,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1943850214}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.62, y: -1.62, z: 0}
+  m_LocalPosition: {x: 165.7, y: -30.7, z: 0}
   m_LocalScale: {x: 0.41334, y: 0.41334, z: 0.41334}
   m_Children: []
   m_Father: {fileID: 0}
@@ -19954,6 +20686,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -20028,6 +20776,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -20246,6 +21010,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -20434,6 +21214,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -20892,7 +21688,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38cd3f0894214c042a62f67b95ce9942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 0}
+  inputReader: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+  keyboardSprite: {fileID: 0}
+  controllerSprite: {fileID: 0}
   speed: 1
   height: 0.5
 --- !u!1 &2116762537
@@ -20987,6 +21785,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6551979075031328880, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: inputReader
+      value: 
+      objectReference: {fileID: 11400000, guid: dccca47ae7b2cbd4b805d0b95004cf86, type: 2}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: keyboardSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86e7aa48a4dd9d34c8c761ef4cbe38c7, type: 3}
+    - target: {fileID: 6551979075031328881, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
+      propertyPath: controllerSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c6c82bd04f808a5428aa57261da1297c, type: 3}
     - target: {fileID: 6551979075031328883, guid: 6f30f579e5312354baaa1517bc4414ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -21267,11 +22081,11 @@ PrefabInstance:
       objectReference: {fileID: 1625459736}
     - target: {fileID: 4531841129668136034, guid: c68edcb216486be4998cfbabc39f5970, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 120.2
+      value: -21.6
       objectReference: {fileID: 0}
     - target: {fileID: 4531841129668136034, guid: c68edcb216486be4998cfbabc39f5970, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -20.2
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4531841129668136034, guid: c68edcb216486be4998cfbabc39f5970, type: 3}
       propertyPath: m_LocalPosition.z
