@@ -35,6 +35,19 @@ public class GameManager : MonoBehaviour
 
     private void Update() 
     {
+        if(Keyboard.current.qKey.wasPressedThisFrame)
+        {
+            if(SceneManager.GetActiveScene().name == "SceneOneBoss")
+            {
+                Debug.Log("PressA");
+                SceneManager.LoadScene(0);
+            }
+            else if(SceneManager.GetActiveScene().name == "SceneOne")
+            {
+                Debug.Log("PressB");
+                SceneManager.LoadScene(3);
+            }
+        }
     }
     
     public void OnControlsChanged(PlayerInput input)

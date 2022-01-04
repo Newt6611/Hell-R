@@ -100,7 +100,7 @@ public class SceneOneManager : MonoBehaviour
     {
         mode = SceneOneMode.normal;
 
-        Total_Hate_Value = 500;
+        Total_Hate_Value = 350;
         Current_Hate_Value = 0;
 
         volume.profile.TryGet(out bloom);
