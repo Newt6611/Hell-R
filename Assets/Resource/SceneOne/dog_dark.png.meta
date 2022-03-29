@@ -93,6 +93,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -101,9 +102,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -124,6 +125,8 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
@@ -632,6 +635,28 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      dog_dark_15: 1038809119254293023
+      dog_dark_0: 3059870439247266696
+      dog_dark_1: 711848910823849779
+      dog_dark_3: 9196252515748015276
+      dog_dark_2: 7295777075004626884
+      dog_dark_22: -1317039914977753553
+      dog_dark_21: -5503831177073886720
+      dog_dark_18: -1721130331173678835
+      dog_dark_6: 4407649119046970324
+      dog_dark_16: -2054103248993990355
+      dog_dark_17: -9160727724707748573
+      dog_dark_19: 6387013831655924968
+      dog_dark_7: 4009174002219327820
+      dog_dark_4: 6154436996549697644
+      dog_dark_12: 2009705766589816990
+      dog_dark_10: 8209575422822358084
+      dog_dark_5: 9169612789309068094
+      dog_dark_8: -6920095946259337768
+      dog_dark_11: 7135753691468121611
+      dog_dark_9: -4852622683405160995
+      dog_dark_20: -5817186496433191416
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Experimental.Rendering.Universal;
+
 
 enum Dog_State {
     none, idle, attack, run, hited, died
@@ -27,12 +27,17 @@ public class SceneOneDog : MonoBehaviour, IEnemy
 
     private Dog_State current_state;
 
-    [SerializeField] private Light2D light;
+    [SerializeField] private UnityEngine.Rendering.Universal.Light2D light;
 
     [SerializeField] private GameObject purple_particle_pre;
     private GameObject purplr_particle = null;
 
     private bool particl_start_moving = false;
+
+    private Material dissolve_material;
+    [SerializeField]
+    [Range(0, 1)]
+    private float dissolve_value;
 
     // Components
     private Rigidbody2D rb;
@@ -50,6 +55,9 @@ public class SceneOneDog : MonoBehaviour, IEnemy
         sprite_renderer = GetComponent<SpriteRenderer>();
 
         current_health = total_health;
+
+        dissolve_value = 1;
+        dissolve_material = GetComponent<SpriteRenderer>().material;
     }
 
     public void SetSpawner(SceneOneMonsterSpawner spawner) => this.spawner = spawner;
@@ -187,6 +195,7 @@ public class SceneOneDog : MonoBehaviour, IEnemy
 
     private void DiedState()
     {
+        dissolve_material.SetFloat("_Fade", dissolve_value);
         StartCoroutine(DiedDelay(5));
     }
 

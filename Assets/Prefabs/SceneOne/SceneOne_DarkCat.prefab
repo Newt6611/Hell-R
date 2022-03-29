@@ -398,7 +398,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 117081d4d6bfb0e43ac1d7b08429e18e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -507,6 +507,7 @@ MonoBehaviour:
   total_health: 2
   light: {fileID: 1838056655}
   purple_particle_pre: {fileID: 7082641250889631538, guid: 8ae09a022e2d84b4da0e5d8d1f1e208b, type: 3}
+  dissolve_value: 1
 --- !u!1 &252225686086365690
 GameObject:
   m_ObjectHideFlags: 0

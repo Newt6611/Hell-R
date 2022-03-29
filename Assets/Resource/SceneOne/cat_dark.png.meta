@@ -84,6 +84,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -92,9 +93,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -115,6 +116,8 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
@@ -602,6 +605,27 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      cat_dark_4: -803121281069691249
+      cat_dark_11: 229568425118423395
+      cat_dark_8: -3152634207618737657
+      cat_dark_13: -2116688060380379926
+      cat_dark_17: 1142214060940030666
+      cat_dark_1: -3126845553992094228
+      cat_dark_10: -2823466064756239313
+      cat_dark_16: -4516358596883528089
+      cat_dark_0: -195791744293854888
+      cat_dark_6: 3852259382320380910
+      cat_dark_2: 5041973642814870303
+      cat_dark_9: -6648893858957017521
+      cat_dark_18: -5998644874609573702
+      cat_dark_14: -242305033523503407
+      cat_dark_19: -8591854918204828432
+      cat_dark_3: -931810822052631432
+      cat_dark_7: 8021119321662459337
+      cat_dark_12: -5534838460792727846
+      cat_dark_5: 8632697596281360948
+      cat_dark_15: -5533907017213401155
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -55,6 +55,9 @@ public class SceneOneMonsterSpawner : MonoBehaviour
 
     private void Timer(int enemys_count)
     {
+        if (!spawn)
+            return;
+            
         if(time_to_spawn_btw < 0 && enemys_count <= max_amount)
             Spawn();
         else

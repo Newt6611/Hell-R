@@ -53,6 +53,7 @@ public class SceneOneCriminal : MonoBehaviour, IEnemy
 
     public void TakeDamage(int d) 
     {
+        Player.Instance.Heal((int)(Player.Instance.TotalHealth * 0.25));
         gameObject.layer = 11; // un_attackable layer
         rigidbody2D.bodyType = RigidbodyType2D.Dynamic;
         transform.rotation = Quaternion.identity;

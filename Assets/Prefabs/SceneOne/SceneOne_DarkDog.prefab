@@ -548,7 +548,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 117081d4d6bfb0e43ac1d7b08429e18e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -648,8 +648,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7f2acbe919861e43920cb04b2dd02d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health_bar_obj: {fileID: 584245787}
-  health_bar: {fileID: 142133574}
   DrawGizmos: 0
   find_player_radius: 6.23
   attack_radius: 4.53
@@ -659,4 +657,5 @@ MonoBehaviour:
   total_health: 3
   light: {fileID: 555816843}
   purple_particle_pre: {fileID: 7082641250889631538, guid: 8ae09a022e2d84b4da0e5d8d1f1e208b, type: 3}
+  dissolve_value: 0
   is_dark: 0

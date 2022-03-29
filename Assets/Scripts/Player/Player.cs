@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
-using UnityEngine.Experimental.Rendering.Universal;
+
 using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
 
     // Player Health
     public int TotalHealth;
-    private int current_health;
+    public int current_health;
     public int Current_Health { get { return current_health;} }
 
     // Player Speed Property
@@ -61,7 +61,7 @@ public class Player : MonoBehaviour
     public float attack_dectector_radius;
     public LayerMask attackable_layer;
 
-    private Light2D light;
+    private UnityEngine.Rendering.Universal.Light2D light;
 
     //
     [SerializeField] private PhysicsMaterial2D no_friction;
@@ -139,7 +139,7 @@ public class Player : MonoBehaviour
         SetUpSceneData();
         //SceneOneManager.Instance.on_normal_mode += OnNormalMode;
         //SceneOneManager.Instance.on_dark_mode += OnDarkMode;
-        light = GetComponentInChildren<Light2D>();
+        light = GetComponentInChildren<UnityEngine.Rendering.Universal.Light2D>();
         rb = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
         sprite_renderer = GetComponent<SpriteRenderer>();
@@ -239,6 +239,13 @@ public class Player : MonoBehaviour
     }
 
     ///////////////////////////////////////
+    public void Heal(int h)
+    {
+        current_health += h;
+        if (current_health > TotalHealth)
+            current_health = TotalHealth;
+        UIManager.Instance.UpdatePlayerHealthBar();
+    }
     
     public void TakeDamage(Transform target, int d)
     {

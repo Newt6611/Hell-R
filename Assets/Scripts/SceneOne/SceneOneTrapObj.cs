@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SceneOneTrapObj : MonoBehaviour
 {
-    public float speed = 20; 
+    public float speed = 13; 
     
     public bool right = true;
 
